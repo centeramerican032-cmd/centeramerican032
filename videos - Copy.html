@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>الفيديوهات — المركز الأمريكي</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="articles.css">
+</head>
+<body>
+    <div class="floating-tools" role="complementary" aria-label="أدوات الوصول السريعة">
+      <a href="https://wa.me/96550255870" class="floating-btn whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" style="width: 75px; height: 75px; font-size: 38px; bottom: 20px;"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+      <a href="tel:+96550255870" class="floating-btn call-btn" title="اتصال: +965 50255870" style="width: 70px; height: 70px; font-size: 36px; bottom: 105px;"><i class="fas fa-phone"></i></a>
+      <a href="https://www.instagram.com/american9center/" class="floating-btn instagram-btn" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style="width: 75px; height: 75px; font-size: 38px; bottom: 190px;"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+      <div class="location-btn" style="position: fixed; bottom: 275px; right: 20px; background: linear-gradient(135deg, #ff6b00 0%, #ffb84d 100%); color: white; padding: 15px 20px; border-radius: 15px; font-size: 13px; max-width: 200px; box-shadow: 0 8px 25px rgba(255, 107, 0, 0.4); text-align: right; line-height: 1.6; z-index: 2000; border: 2px solid white;">
+        <p style="margin: 0 0 8px 0; font-weight: bold;">📍 العنوان</p>
+        <p style="margin: 0; font-size: 12px;">82JC+H9P، شارع 231<br>مدينة الكويت</p>
+      </div>
+    </div>
+    <button id="scroll-top" class="floating-btn scroll-top" aria-label="الذهاب لأعلى" title="الذهاب لأعلى">↑</button>
+
+    <nav>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">المركز <span>الأمريكي</span></a>
+            <div class="nav-links">
+                <a href="index.html">الرئيسية</a>
+                <a href="articles.html">المقالات</a>
+                <a href="videos.html" class="active">الفيديوهات</a>
+                <a href="https://www.instagram.com/american9center/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main-content">
+    <section class="section pt-100">
+        <div class="container">
+            <h1 class="section-title">الفيديوهات التعليمية</h1>
+            <p class="lead">شاهد فيديوهات التوعية وعمليات المكافحة من فريقنا — يمكنك تشغيل المقاطع هنا أو الانتقال إلى YouTube.</p>
+
+            <div class="video-grid">
+                <!-- YouTube embed example -->
+                <div class="video-item" data-type="youtube" data-src="https://www.youtube.com/embed/dQw4w9WgXcQ">
+                    <img src="images/cockroach-detail.svg" alt="فيديو تعليمي" loading="lazy">
+                    <div class="video-caption">شرح طرق الوقاية من الصراصير</div>
+                </div>
+
+                <div class="video-item" data-type="youtube" data-src="https://www.youtube.com/embed/3JZ_D3ELwOQ">
+                    <img src="images/rodent-detail.svg" alt="فيديو خدمة" loading="lazy">
+                    <div class="video-caption">مكافحة القوارض - خدمة ميدانية</div>
+                </div>
+
+                <div class="video-item" data-type="youtube" data-src="https://www.youtube.com/embed/aqz-KE-bpKQ">
+                    <img src="images/mosquito-detail.svg" alt="فيديو بعوض" loading="lazy">
+                    <div class="video-caption">برنامج مكافحة البعوض الموسمي</div>
+                </div>
+
+                <div class="video-item" data-type="youtube" data-src="https://www.youtube.com/embed/xyz123">
+                    <img src="images/service-spray.svg" alt="فيديو رش" loading="lazy">
+                    <div class="video-caption">تقنيات الرش الحديثة بدون رائحة</div>
+                </div>
+
+                <div class="video-item" data-type="youtube" data-src="https://www.youtube.com/embed/abc456">
+                    <img src="images/service-inspection.svg" alt="فيديو فحص" loading="lazy">
+                    <div class="video-caption">كيفية الفحص الاحترافي للمباني</div>
+                </div>
+
+                <div class="video-item" data-type="youtube" data-src="https://www.youtube.com/embed/def789">
+                    <img src="images/service-follow-up.svg" alt="فيديو متابعة" loading="lazy">
+                    <div class="video-caption">البرنامج الدوري والمتابعة المستمرة</div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <!-- Video modal -->
+    <div id="video-modal" class="video-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="مشغل الفيديو" tabindex="-1">
+        <button class="video-close" aria-label="إغلاق">×</button>
+        <div class="video-wrap"></div>
+    </div>
+
+    <script src="articles.js" defer></script>
+</body>
+</html>

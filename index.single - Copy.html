@@ -1,0 +1,1946 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الشركة البريطانية لمكافحة الحشرات - خدمات احترافية مضمونة</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    
+    
+    
+    <style>
+        :root { 
+            --primary: #0d5d0d; 
+            --accent: #ff6b00; 
+            --light: #f8fff8; 
+            --transition: all 0.25s cubic-bezier(0.4,0,0.2,1); 
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Cairo', sans-serif; line-height: 1.8; color: #1a1a1a; background: var(--light); overflow-x: hidden; }
+
+        /* Navigation */
+        nav { position: fixed; top: 0; width: 100%; background: rgba(13, 93, 13, 0.95); -webkit-backdrop-filter: blur(15px); backdrop-filter: blur(15px); padding: 15px 0; z-index: 1000; box-shadow: 0 8px 25px rgba(0,0,0,0.15); }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.8rem; color: white; font-weight: 900; text-decoration: none; }
+        .logo span { color: var(--accent); }
+        .nav-links a { color: white; margin-right: 20px; text-decoration: none; font-weight: 600; font-size: 1rem; transition: var(--transition); }
+        .nav-links a:hover { color: var(--accent); }
+
+        /* Floating Buttons */
+        .floating-btn { position: fixed; width: 60px; height: 60px; border-radius: 50%; color: white; display: flex; align-items: center; justify-content: center; font-size: 30px; box-shadow: 0 5px 15px rgba(0,0,0,0.3); z-index: 2000; transition: var(--transition); }
+        .whatsapp-btn { bottom: 20px; right: 20px; background: #25D366; }
+        .call-btn { bottom: 90px; right: 20px; background: #007bff; }
+        .floating-btn:hover { transform: scale(1.07); }
+
+        /* Hero Section */
+        .hero { height: 100vh; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://8868752.fs1.hubspotusercontent-na1.net/hubfs/8868752/Images/Technician%20Crew%20Spraying%20Exterior%20Pest%20Control%201.jpg') center/cover no-repeat; display: flex; align-items: center; text-align: center; color: white; padding-top: 80px; }
+        .hero h1 { font-size: 3rem; margin-bottom: 20px; font-weight: 900; }
+        .hero p { font-size: 1.4rem; margin-bottom: 30px; }
+        .btn { background: var(--accent); color: white; padding: 15px 40px; border-radius: 50px; text-decoration: none; font-size: 1.2rem; font-weight: bold; display: inline-block; transition: var(--transition); }
+        .btn:hover { background: #e65a00; transform: translateY(-3px); }
+
+        /* Sections */
+        section { padding: 80px 0; }
+        .section-title { text-align: center; font-size: 2.5rem; color: var(--primary); margin-bottom: 50px; position: relative; }
+        .section-title::after { content: ''; display: block; width: 80px; height: 4px; background: var(--accent); margin: 10px auto; }
+
+        .article-img { width: 100%; max-height: 500px; object-fit: cover; border-radius: 20px; margin-bottom: 30px; }
+        .article-content { background: white; padding: 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); margin-bottom: 60px; }
+        .article-content h2 { color: var(--primary); margin-bottom: 20px; }
+
+        /* Grid & Cards */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .card { background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.05); text-align: center; padding-bottom: 20px; }
+        .card img { width: 100%; height: 200px; object-fit: cover; }
+
+        /* Toast Notification */
+        .toast-notification { position: fixed; bottom: -100px; left: 20px; background: #333; color: white; padding: 15px 25px; border-radius: 10px; z-index: 9999; transition: bottom 0.5s ease; border-right: 5px solid var(--accent); }
+        .toast-notification.show { bottom: 20px; }
+
+        footer { background: var(--primary); color: white; text-align: center; padding: 40px 0; }
+
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .nav-links { display: none; }
+            .section-title { font-size: 1.8rem; }
+        }
+    </style>
+<style>
+:root {
+    --primary: #0d5d0d;
+    --primary-700: #084d06;
+    --accent: #ffb300;
+    --accent-2: #ff7043;
+    --muted: #6b6b6b;
+    --dark: #0c0c0c;
+    --text-white: #f8f9fa;
+    --bg: #f7f8fb;
+    --card-bg: #ffffff;
+    --transition: all 0.25s cubic-bezier(0.4,0,0.2,1);
+} 
+/* Loader */
+#loader { position: fixed; width:100%; height:100vh; background: var(--dark); z-index: 10000; display:flex; flex-direction:column; justify-content:center; align-items:center; color: #fff; }
+.cube { width:40px; height:40px; background:var(--accent); animation: rotate 1s infinite ease-in-out; }
+@keyframes rotate { 0% {transform: rotate(0deg)} 100% {transform: rotate(360deg)} }
+
+/* Header Glass */
+.glass-header { position: fixed; width: 100%; top: 0; z-index: 999; padding: 20px 5%; background: rgba(0, 31, 63, 0.85); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); color: #fff; display: flex; justify-content: space-between; align-items:center; }
+
+/* Utility classes moved from inline styles for accessibility and maintainability */
+.check-icon{ color: #25D366; }
+.hero-cta{ background: var(--accent); color: white; padding: 40px; border-radius: 20px; text-align:center; margin-top: -50px; position: relative; z-index: 10; }
+.lead{ text-align:center; max-width:900px; margin:0 auto 20px; }
+.testimonial-inner{ padding:20px; text-align:center; }
+.page-top{ padding-top:120px; }
+.pt-100{ padding-top:100px; }
+.footer-about .logo img{ height:40px; }
+.logo { font-size: 1.5rem; font-weight: 900; letter-spacing: 2px; }
+.logo span { color: var(--accent); }
+.btn-call { background: var(--accent); color: #000; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: 900; }
+
+/* Hero Parallax */
+.hero-parallax { height: 100vh; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('hero.jpg') center/cover fixed; display:flex; align-items:center; justify-content:center; text-align:center; color: #fff; }
+.hero-content h1 { font-size: 4rem; margin-bottom: 20px; }
+.hero-content h1 span { color: var(--accent); }
+
+/* المقالات الضخمة */
+.art-section { display: flex; align-items: center; padding: 80px 10%; gap: 60px; min-height: 80vh; }
+.art-text { flex: 1.2; }
+.art-text h2 { font-size: 2.5rem; color: var(--primary); margin-bottom: 25px; border-right: 8px solid var(--accent); padding-right: 15px; }
+.art-text p { font-size: 1.2rem; line-height: 2; text-align: justify; color: #1a1a1a; font-weight: 500; }
+.art-media { flex: 0.8; }
+ .art-media img { width: 100%; border-radius: 30px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); transition: transform .25s cubic-bezier(0.4,0,0.2,1); }
+.art-media img:hover { transform: scale(1.05) rotate(2deg); }
+
+/* التناوب */
+.art-section.right { flex-direction: row-reverse; background: #fdfdfd; }
+
+/* معرض الصور والفيديو */
+.title-main { text-align: center; margin: 60px 0; font-size: 2.5rem; color: var(--primary); }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; padding: 0 5%; }
+.grid-item img, video { width: 100%; height: 300px; object-fit: cover; border-radius: 15px; }
+
+/* فوتر */
+footer { background: var(--primary); color: #fff; text-align: center; padding: 100px 5%; }
+.f-num { font-size: 4rem; color: var(--accent); margin-top: 20px; }
+
+.wa-float { position: fixed; bottom: 30px; left: 30px; background: #25d366; color: #fff; padding: 15px 30px; border-radius: 50px; text-decoration: none; font-weight: bold; z-index: 1000; box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+
+@media (max-width: 768px) {
+    .art-section { flex-direction: column !important; text-align: center; padding: 50px 5%; }
+   
+    .hero-content h1 { font-size: 2.5rem; }
+    /* شريط الإعلانات المتحرك */
+.news-ticker {
+    background: var(--accent);
+    color: #000;
+    overflow: hidden;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10001;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.ticker-wrapper {
+    display: flex;
+    white-space: nowrap;
+    animation: ticker-move 20s linear infinite;
+}
+
+.ticker-item {
+    padding: 0 40px;
+}
+
+@keyframes ticker-move {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+/* نافذة إشعارات الطلبات المباشرة */
+.order-popup {
+    position: fixed;
+    bottom: 100px;
+    right: -400px; /* مخفية في البداية */
+    background: rgba(255, 255, 255, 0.95);
+    color: #1a1a1a;
+    font-weight: 500;
+    padding: 15px 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-left: 5px solid #25d366;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    min-width: 300px;
+}
+
+.order-popup.show {
+    right: 20px; /* تظهر عند إضافة الكلاس */
+}
+
+.pop-icon { font-size: 2rem; }
+.pop-text { font-size: 0.9rem; line-height: 1.4; }
+.pop-text strong { color: var(--primary); }
+/* شريط الإعلانات العلوي */
+.top-ads-bar {
+    background: #d90429; /* لون أحمر جذاب */
+    color: white;
+    height: 40px;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10001;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+.ads-track {
+    display: flex;
+    white-space: nowrap;
+    animation: move-ads 25s linear infinite;
+}
+
+.ads-track span {
+    padding: 0 50px;
+    font-size: 0.95rem;
+}
+
+@keyframes move-ads {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+/* نافذة الإشعارات الذكية */
+.sales-popup {
+    position: fixed;
+    bottom: 30px;
+    right: -400px; /* مخفية خارج الشاشة */
+    background: white;
+    color: #1a1a1a;
+    font-weight: 500;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    z-index: 10002;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-right: 5px solid #25d366; /* لون أخضر للثقة */
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    min-width: 280px;
+}
+
+.sales-popup.active {
+    right: 20px; /* تظهر في الشاشة */
+}
+
+.pop-avatar {
+    background: #25d366;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+.pop-info p { margin: 0; font-size: 0.9rem; }
+.pop-info #pop-user { font-weight: bold; color: #004a99; }
+.pop-info small { color: #555; font-size: 0.7rem; font-weight: 500; }
+
+header {
+  background: url('images/header-bg.jpg') no-repeat center center/cover;
+  color: white;
+  text-align: center;
+  padding: 50px 0;
+}
+
+#services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 22px;
+  padding: 30px 5%;
+  background-color: var(--bg);
+}
+
+#services .service {
+  text-align: center;
+  background: var(--card-bg);
+  padding: 18px;
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.04);
+  transition: transform .28s var(--transition), box-shadow .28s var(--transition);
+}
+#services .service:hover { transform: translateY(-6px); box-shadow: 0 22px 44px rgba(0,0,0,0.08); }
+
+#services .service-img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 12px;
+}
+
+/* Pest hero image used to visually separate sections */
+.pest-hero { margin: 18px 0 22px; border-radius: 12px; overflow: hidden; position: relative; }
+.pest-hero img { width: 100%; height: 260px; object-fit: cover; display:block; filter: saturate(1.05) contrast(1.02); opacity: .98; transition: transform 0.45s cubic-bezier(0.22,0.8,0.2,1); will-change: transform; transform: translateY(0); }
+.pest-hero::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0.0), rgba(0,0,0,0.06)); pointer-events: none; }
+@media (max-width:768px) {
+  .pest-hero img { height: 160px; }
+  #services { padding: 24px 4%; }
+}
+
+/* Service image hover polish */
+.service-img { transition: transform .28s var(--transition), box-shadow .28s var(--transition); }
+.service-img:hover { transform: scale(1.03) rotate(-1deg); box-shadow: 0 18px 44px rgba(0,0,0,0.08); }
+
+
+#articles {
+  padding: 20px;
+  background-color: #fff;
+}
+
+#articles article {
+  margin-bottom: 20px;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #333;
+  color: white;
+}
+
+/* Gallery */
+.gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 18px; padding: 30px 5%; }
+.gallery-item { background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.06); cursor: pointer; }
+ .gallery-item img { width:100%; height:220px; object-fit:cover; display:block; transition: transform .25s cubic-bezier(0.4,0,0.2,1); }
+.gallery-item:hover img { transform: scale(1.04); }
+
+/* Video grid */
+.video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; padding: 18px 5%; }
+.video-item { background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.06); cursor: pointer; text-align:center; }
+.video-item img { width:100%; height:160px; object-fit:cover; display:block; }
+.video-caption { padding: 12px 10px; font-weight: 700; color: var(--primary); }
+
+/* Video modal */
+.video-modal { position: fixed; inset: 0; display: none; align-items: center; justify-content: center; background: rgba(0,0,0,0.85); z-index: 4000; }
+.video-modal.show { display: flex; }
+.video-wrap { width: min(1000px, 95%); max-width: 1000px; background: transparent; border-radius: 8px; overflow: hidden; }
+.video-wrap iframe, .video-wrap video { width: 100%; height: 560px; max-height: 80vh; border: none; display:block; }
+.video-close { position: absolute; top: 18px; left: 18px; background: transparent; color: #fff; border: none; font-size: 40px; cursor: pointer; }
+
+@media (max-width:768px) {
+    .video-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; padding: 14px 4%; }
+    .video-item img { height:120px; }
+    .video-wrap iframe, .video-wrap video { height: 260px; }
+} 
+
+/* Lightbox */
+.lightbox { position: fixed; inset: 0; display: none; align-items: center; justify-content: center; background: rgba(0,0,0,0.8); z-index: 3000; }
+.lightbox img { max-width: 90%; max-height: 80%; border-radius: 6px; box-shadow: 0 20px 60px rgba(0,0,0,0.6); }
+.lightbox.show { display: flex; }
+.lightbox-close { position: absolute; top: 20px; left: 20px; background: transparent; color: #fff; border: none; font-size: 40px; cursor: pointer; }
+
+/* Contact */
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; align-items: start; padding: 0 5%; }
+.contact-card { background: white; padding: 30px; border-radius: 16px; box-shadow: 0 12px 30px rgba(0,0,0,0.06); }
+.contact-card .btn { display:block; margin: 10px 0; max-width: 280px; }
+.contact-form form { display:flex; flex-direction:column; gap:12px; }
+.contact-form input, .contact-form textarea { padding: 12px; border-radius: 8px; border: 1px solid #ddd; width:100%; }
+
+/* Footer grid */
+.footer-grid { display:flex; gap: 40px; justify-content: space-between; align-items: start; flex-wrap: wrap; padding: 30px 5%; }
+.footer-about p { max-width: 420px; }
+.footer-contact h4, .footer-clients h4 { color: #fff; margin-bottom: 8px; }
+.clients-logos img { max-width: 120px; margin: 5px; }
+
+@media (max-width:768px) {
+    .contact-grid { grid-template-columns: 1fr; }
+    .footer-grid { flex-direction: column; gap: 20px; }
+}
+
+/* Testimonials carousel */
+.testimonials { padding: 60px 0; background: linear-gradient(90deg, rgba(13,93,13,0.02), rgba(0,0,0,0)); }
+.testimonials-carousel { position: relative; overflow: hidden; }
+.testimonial-track { display: flex; transition: transform .6s cubic-bezier(0.4,0,0.2,1); gap: 20px; will-change: transform; cursor: grab; }
+.testimonial-track:active { cursor: grabbing; }
+.testimonial-card { min-width: 100%; box-sizing: border-box; background: var(--card-bg); padding: 20px; border-radius: 14px; transition: transform .35s var(--transition), box-shadow .35s var(--transition); border: 1px solid rgba(0,0,0,0.04); }
+.testimonial-card:hover { transform: translateY(-8px) scale(1.01); box-shadow: 0 20px 40px rgba(13,93,13,0.06); }
+.testimonial-card .client-avatar { width:72px; height:72px; border-radius:50%; display:block; margin: 0 auto 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.12); }
+.testimonial-card h3 { margin: 6px 0 8px; color: #f39c12; }
+.testimonial-card p { color: #1a1a1a; font-size: 1rem; line-height:1.8; font-weight: 500; }
+.client-company { display:block; font-size:0.85rem; color:var(--muted); margin-top:6px; font-weight:700; text-align:center; }
+
+/* carousel dots */
+.carousel-dots { display:flex; gap:10px; justify-content:center; margin-top:14px; }
+.carousel-dot { width:10px; height:10px; border-radius:50%; background:#e6e6e6; cursor:pointer; border:none; transition: transform .18s var(--transition), background .18s var(--transition); }
+.carousel-dot.active { background: var(--primary); transform: scale(1.15); box-shadow: 0 8px 20px rgba(13,93,13,0.12); }
+.carousel-dot:focus { outline: 2px solid rgba(13,93,13,0.18); }
+
+.carousel-prev, .carousel-next { position: absolute; top: 50%; transform: translateY(-50%); background: linear-gradient(135deg,var(--primary),var(--primary-700)); color: #fff; border: none; width:52px; height:52px; border-radius: 50%; cursor: pointer; box-shadow: 0 8px 26px rgba(0,0,0,0.18); transition: transform .18s var(--transition), box-shadow .18s var(--transition), background .18s var(--transition); display:flex; align-items:center; justify-content:center; font-size:1.4rem; }
+.carousel-prev { left: 12px; }
+.carousel-next { right: 12px; }
+.carousel-prev:hover, .carousel-next:hover, .carousel-prev:focus, .carousel-next:focus { transform: translateY(-50%) scale(1.08) rotate(-6deg); box-shadow: 0 18px 44px rgba(13,93,13,0.14); outline: none; }
+
+@media (min-width: 768px) {
+    .testimonial-card { min-width: 50%; }
+}
+@media (min-width: 1024px) {
+    .testimonial-card { min-width: 33.3333%; }
+}
+
+/* Animations & global enhancements */
+.fade-in { animation: fadeInUp .6s ease both; }
+@keyframes fadeInUp { from { opacity: 0; transform: translateY(8px);} to { opacity:1; transform: translateY(0);} }
+
+.read-more.btn { background: linear-gradient(90deg,var(--accent),var(--accent-2)); color:#fff; padding:10px 16px; border-radius:8px; display:inline-block; transition: transform .18s var(--transition); text-decoration:none; }
+.read-more.btn:hover{ transform: translateY(-4px) scale(1.02); box-shadow: 0 12px 30px rgba(0,0,0,0.12); }
+
+.article-content { font-size: 1.1rem; line-height: 1.9; color: #222; }
+.article-content h2 { font-size:1.6rem; color:var(--primary); transition: color .18s var(--transition); }
+.article-content p { text-align: justify; }
+.section-title { text-shadow: 0 2px 0 rgba(0,0,0,0.02); }
+
+/* Hover effects site-wide */
+a:hover, .btn-call:hover { transform: translateY(-3px); }
+
+@media (prefers-reduced-motion: reduce) {
+    * { animation-duration:0.001ms !important; transition-duration:0.001ms !important; scroll-behavior: auto !important; }
+}
+
+/* Methods / Articles tweaks */
+.method-article { background: white; padding: 24px; border-radius: 12px; margin-bottom: 22px; line-height: 1.9; color: #1a1a1a; font-weight: 500; }
+.method-article h3 { color: var(--primary); margin-bottom: 10px; }
+.method-article h4 { color: #004a99; margin-top: 12px; margin-bottom: 8px; }
+
+/* pest sections grid */
+.method-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap:18px; }
+
+.pest-section { background: linear-gradient(180deg, #fff, #f8f8f9); padding: 22px; border-radius: 14px; transition: transform .28s cubic-bezier(0.4,0,0.2,1), box-shadow .28s ease, border-color .28s ease; border: 1px solid rgba(0,0,0,0.04); box-shadow: 0 8px 20px rgba(13, 93, 13, 0.03); }
+.pest-section:hover { transform: translateY(-8px) scale(1.005); box-shadow: 0 18px 40px rgba(13,93,13,0.08); }
+.pest-header { display:flex; align-items:center; gap:16px; margin-bottom:10px; }
+.pest-icon { width:56px; height:56px; flex:0 0 56px; border-radius:12px; background: #fff; box-shadow: 0 6px 18px rgba(0,0,0,0.06); padding:6px; }
+.pest-section h3 { margin:0; color: var(--primary); font-size:1.2rem; }
+.pest-section h4 { color: #0d5d0d; font-weight: 600; }
+.pest-section p { color:#333; line-height:1.8; }
+
+/* color accents per pest */
+.pest-cockroaches { --accent: #6d4c41; border-top: 6px solid var(--accent); }
+.pest-bedbugs { --accent: #8e244b; border-top: 6px solid var(--accent); }
+.pest-rodents { --accent: #5d4037; border-top: 6px solid var(--accent); }
+.pest-ants { --accent: #4b2e2e; border-top: 6px solid var(--accent); }
+.pest-termites { --accent: #6b4f3b; border-top: 6px solid var(--accent); }
+.pest-mosquitoes { --accent: #37474f; border-top: 6px solid var(--accent); }
+.pest-flies { --accent: #2e7d32; border-top: 6px solid var(--accent); }
+.pest-fleas { --accent: #6d1b1b; border-top: 6px solid var(--accent); }
+.pest-pantry { --accent: #8d6e63; border-top: 6px solid var(--accent); }
+.pest-silverfish { --accent: #78909c; border-top: 6px solid var(--accent); }
+
+/* simple fade-up animation on load */
+@keyframes fadeUp { from {opacity:0; transform: translateY(12px);} to {opacity:1; transform: translateY(0);} }
+.pest-section { animation: fadeUp .6s ease both; }
+
+@media (max-width:1024px) {
+    .method-list { gap: 14px; padding: 0 10px; grid-template-columns: 1fr; }
+
+/* Mobile improvements for touch devices */
+@media (max-width:768px) {
+    .nav-toggle { display:block; background: transparent; border: none; color: #fff; font-size: 1.6rem; padding: 6px 10px; margin-left: 8px; }
+    .nav-links { position: fixed; top: 0; left: auto; right: -110%; height: 100vh; width: 260px; background: rgba(13,93,13,0.98); padding: 90px 20px; display: flex; flex-direction: column; gap: 18px; align-items: flex-start; transition: right .28s ease; }
+    .nav-links.open { right: 0; }
+    .nav-links a { color: #fff; font-size: 1.1rem; margin: 6px 0; }
+    .btn { display:block; width:100%; padding:14px; box-sizing: border-box; }
+    .contact-card .btn { max-width: none; }
+    .hero { padding-top: 120px; min-height: 60vh; }
+    .hero h1 { font-size: 2rem; }
+    .hero p { font-size: 1rem; }
+    .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; padding: 18px 4%; }
+    .gallery-item img { height: 140px; }
+    .lightbox img { max-width: 95%; max-height: 80%; }
+
+/* Global gallery caption (homepage) */
+.gallery-grid .gallery-caption, .articles-gallery-grid .gallery-caption{ text-align:center; font-size:.95rem; color:#333; margin-top:8px; }
+    .carousel-prev, .carousel-next { width:64px; height:64px; font-size:1.6rem; }
+    .floating-btn { width:56px; height:56px; font-size:22px; }
+    .gallery-item:hover img, .service-img:hover { transform: none; box-shadow: none; }
+}
+
+/* Hide nav-toggle on desktop */
+.nav-toggle { display: none; }
+}
+
+
+
+/* Articles & global enhancements */
+:root{
+  --accent-anim: linear-gradient(90deg,#ffb300,#ff7043);
+}
+
+/* Page layout for articles */
+#articles-page .container { display: grid; grid-template-columns: 1fr 320px; gap: 28px; align-items:start; }
+.articles-main { background: transparent; }
+.articles-aside { position: sticky; top: 110px; align-self:start; }
+.articles-aside .toc { background:#fff; border-radius:12px; padding:14px; box-shadow:0 10px 30px rgba(0,0,0,0.06); }
+.articles-aside .toc h4{ margin:0 0 8px; font-size:1rem; color:var(--primary); }
+.articles-aside .toc a{ display:block; padding:8px 10px; color:#333; text-decoration:none; border-radius:8px; margin-bottom:6px; transition: background .18s, transform .18s; }
+.articles-aside .toc a.active{ background: var(--accent); color:#fff; transform: translateX(-4px); box-shadow: 0 8px 18px rgba(0,0,0,0.08); }
+
+/* Reveal on scroll */
+.reveal-on-scroll{ opacity:0; transform: translateY(14px) scale(.995); transition: opacity .6s cubic-bezier(.2,.9,.2,1), transform .6s cubic-bezier(.2,.9,.2,1); will-change: opacity, transform; }
+.reveal-on-scroll.in-view{ opacity:1; transform: none; }
+
+/* Pest section polish */
+.pest-section{ background: linear-gradient(180deg,#fff,#fbfbfb); padding:18px; border-radius:12px; margin-bottom:18px; border:1px solid rgba(0,0,0,0.03); position:relative; overflow:hidden; }
+.pest-section::before{ content:''; position:absolute; right:-30px; top:-30px; width:140px; height:140px; border-radius:50%; background: radial-gradient(circle at 30% 30%, rgba(255,107,0,0.12), rgba(255,107,0,0)); transform: rotate(10deg); pointer-events:none; }
+.pest-section::after{ content:''; position:absolute; left:-40px; bottom:-40px; width:220px; height:220px; border-radius:50%; background: radial-gradient(circle at 70% 70%, rgba(13,93,13,0.06), rgba(13,93,13,0)); pointer-events:none; }
+.pest-header{ display:flex; align-items:center; gap:12px; margin-bottom:10px; }
+.pest-header h3{ margin:0; font-size:1.15rem; color:var(--primary); }
+.pest-hero{ border-radius: 10px; overflow:hidden; margin-bottom: 12px; }
+.pest-hero img{ width:100%; height:200px; object-fit:cover; display:block; }
+
+/* Read more collapse */
+.pest-body{ max-height: 0; overflow:hidden; transition: max-height .45s cubic-bezier(.2,.9,.2,1), padding .3s ease, opacity .25s ease; opacity:0; padding:0 0; }
+.pest-body.expanded{ max-height: 2400px; padding:18px 0; opacity:1; }
+
+/* Pest body text styling */
+.pest-body h2 { color: #0d5d0d; font-weight: 700; margin-top: 18px; margin-bottom: 12px; font-size: 1.3rem; }
+.pest-body p { color: #1a1a1a; line-height: 1.8; margin-bottom: 12px; font-weight: 500; }
+.pest-body ol, .pest-body ul { color: #1a1a1a; margin-left: 20px; margin-bottom: 12px; }
+.pest-body li { color: #1a1a1a; margin-bottom: 8px; line-height: 1.8; font-weight: 500; }
+.pest-body strong { color: #0d5d0d; font-weight: 700; }
+
+.pest-toggle{ display:inline-block; margin-top:12px; background: none; border: 1px solid var(--primary); color:var(--primary); padding:8px 12px; border-radius:8px; cursor:pointer; }
+
+/* Progress bar */
+#page-progress{ position:fixed; left:0; top:0; height:3px; width:0; background:linear-gradient(90deg,#25D366,var(--accent)); z-index:2000; transition: width .12s linear; }
+
+/* Responsive */
+@media (max-width:1024px){ #articles-page .container{ grid-template-columns: 1fr; } .articles-aside{ position:relative; top:0; margin-bottom:16px; } .pest-hero img{ height:150px; } }
+
+/* Small site-wide enhancements */
+.btn{ transition: transform .18s ease, box-shadow .18s ease; }
+.btn:hover{ transform: translateY(-3px) scale(1.01); }
+
+/* Soft underline animation for headings */
+.section-title{ position:relative; }
+.section-title::after{ content:''; display:block; height:4px; width:80px; background:var(--accent); margin:10px auto 0; border-radius:4px; transition: transform .4s ease; }
+
+/* Article page - logo & nav polish */
+.articles-page .nav-container .logo{ font-weight:900; font-size:1.2rem; letter-spacing:.6px; color:var(--primary); }
+.articles-page .nav-container .logo span{ color: #ff7043; }
+.articles-page .nav-links a[aria-label]{ display:inline-flex; align-items:center; justify-content:center; width:40px; height:40px; border-radius:8px; background:linear-gradient(180deg, rgba(255,255,255,0.9), #fff); box-shadow:0 6px 18px rgba(0,0,0,0.06); }
+.articles-page .nav-links a[aria-label]:hover{ transform: translateY(-3px); }
+
+
+/* subtle micro-interactions */
+.card, .method-article{ transition: transform .26s cubic-bezier(.2,.9,.2,1), box-shadow .26s; }
+.card:hover, .method-article:hover{ transform: translateY(-6px); box-shadow: 0 20px 40px rgba(13,93,13,0.06); }
+
+/* New: Alternating image/text rows for articles */
+.pest-row{ display:flex; gap:20px; align-items:center; }
+.pest-media{ flex:0 0 360px; max-width:360px; }
+.pest-media img{ width:100%; height:220px; object-fit:cover; border-radius:10px; transition: transform .45s ease, box-shadow .45s ease; }
+.pest-content{ flex:1; }
+.pest-icon{ width:56px; height:56px; border-radius:50%; display:inline-flex; align-items:center; justify-content:center; background:linear-gradient(180deg, #fff, #fafafa); box-shadow: 0 8px 20px rgba(0,0,0,0.06); padding:8px; margin-left:10px; transition: transform .28s ease, box-shadow .28s ease; }
+.pest-section:hover .pest-icon{ transform: translateY(-4px) scale(1.05); box-shadow: 0 12px 28px rgba(13,93,13,0.08); }
+.pest-header h3{ display:inline-block; vertical-align:middle; margin:0; }
+.pest-row:hover .pest-media img{ transform: scale(1.03) translateY(-4px); box-shadow:0 18px 40px rgba(0,0,0,0.08); }
+
+/* Alternate layout for even sections */
+.method-list .pest-section:nth-of-type(even) .pest-row{ flex-direction: row-reverse; }
+
+/* Gallery added to articles */
+.articles-gallery-grid{ display:grid; grid-template-columns: repeat(4, 1fr); gap:10px; margin-top:12px; }
+.articles-gallery-grid .gallery-item img{ width:100%; height:140px; object-fit:cover; border-radius:8px; transition: transform .25s ease, box-shadow .25s ease; cursor:pointer; }
+.articles-gallery-grid .gallery-item img:hover{ transform: translateY(-4px) scale(1.03); box-shadow: 0 18px 40px rgba(0,0,0,0.08); }
+.articles-gallery-grid .gallery-caption{ text-align:center; font-size:.95rem; color:#333; margin-top:8px; }
+
+@media (max-width:1100px){ .articles-gallery-grid{ grid-template-columns: repeat(3, 1fr); } .pest-media{ flex:0 0 260px; max-width:260px; } }
+@media (max-width:768px){ .articles-gallery-grid{ grid-template-columns: repeat(2,1fr); } .pest-row{ flex-direction:column; } .pest-media{ width:100%; max-width:100%; } .pest-media img{ height:180px; }
+  .pest-header{ margin-bottom:8px; }
+}
+@media (max-width:420px){ .articles-gallery-grid{ grid-template-columns: repeat(1,1fr); } }
+
+/* Videos grid */
+
+/* Gallery: larger tiles for variety */
+.articles-gallery-grid .gallery-item.size-large{ grid-column: span 2; grid-row: span 2; }
+.articles-gallery-grid .gallery-item.size-large img{ height:260px; object-fit:cover; }
+
+/* Center highlighted video */
+.articles-video-grid .video-item.centered-video{ grid-column: 1 / -1; justify-self: center; max-width: 640px; }
+
+/* Top nav social icons */
+.nav-social{ display:inline-flex; align-items:center; gap:8px; padding:6px 8px; border-radius:8px; color:#fff; text-decoration:none; }
+.nav-social .nav-social-text{ font-size:0.85rem; margin-inline-start:6px; color:#fff; font-weight:600; }
+.nav-social.instagram{ background: linear-gradient(90deg,#d6249f,#285AEB); padding:6px 10px; }
+.nav-social.whatsapp{ background:#25D366; padding:6px 10px; }
+
+/* Custom thin scrollbar for modern browsers */
+*::-webkit-scrollbar{ width:10px; height:10px }
+*::-webkit-scrollbar-thumb{ background: linear-gradient(#cfcfcf,#bdbdbd); border-radius:8px }
+
+/* Slightly slower reveal timing for better feel */
+.reveal-on-scroll{ transition-duration: .8s }
+
+/* Scroll to top button */
+.scroll-top{ left:20px; right:auto; bottom:20px; background:#111; width:48px; height:48px; border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:18px; }
+
+/* Centered animated logo for articles page */
+.articles-page .nav-container{ position:relative; }
+.articles-page .logo{ position:absolute; left:50%; transform:translateX(-50%); z-index:1100; background: linear-gradient(90deg,#ff7043,#25D366,#ffb300); -webkit-background-clip:text; -webkit-text-fill-color:transparent; font-weight:900; transition: transform .6s ease; }
+.articles-page .logo:hover{ transform:translateX(-50%) scale(1.02);} 
+@keyframes logo-glow{ from{ filter:drop-shadow(0 0 0 rgba(255,112,67,0)); } to{ filter:drop-shadow(0 6px 18px rgba(255,112,67,0.18)); }}
+.articles-page .logo{ animation: logo-glow 3s ease-in-out infinite alternate; }
+
+.articles-video-grid{ display:grid; grid-template-columns: repeat(3, 1fr); gap:12px; margin-top:12px; }
+.articles-video-grid .video-item{ background:#fff; border-radius:10px; padding:8px; box-shadow:0 10px 24px rgba(0,0,0,0.04); display:flex; flex-direction:column; align-items:center; cursor:pointer; overflow:hidden; }
+.articles-video-grid .video-item .thumb{ width:100%; height:140px; background:linear-gradient(180deg,#eee,#f7f7f7); border-radius:8px; display:flex; align-items:center; justify-content:center; position:relative; overflow:hidden; }
+.articles-video-grid .video-item .thumb img.video-thumb{ width:100%; height:100%; object-fit:cover; display:block; }
+.articles-video-grid .video-item .thumb .play-overlay{ position:absolute; inset:0; display:flex; align-items:center; justify-content:center; font-size:30px; color:rgba(255,255,255,0.95); text-shadow:0 6px 18px rgba(0,0,0,0.4); background:linear-gradient(180deg, rgba(0,0,0,0.12), rgba(0,0,0,0.18)); opacity:0; transition:opacity .18s ease; }
+.articles-video-grid .video-item:hover .play-overlay{ opacity:1; }
+.articles-video-grid .video-item p{ margin:8px 0 0; font-size:.95rem; text-align:center; }
+@media (max-width:1100px){ .articles-video-grid{ grid-template-columns: repeat(2, 1fr); } }
+@media (max-width:560px){ .articles-video-grid{ grid-template-columns: repeat(1, 1fr); } }
+
+/* Article page rows */
+.article-row{ display:flex; gap:20px; align-items:center; margin-bottom:18px; }
+.article-media{ flex:0 0 320px; max-width:320px; }
+.article-media img{ width:100%; height:200px; object-fit:cover; border-radius:10px; }
+.article-text{ flex:1; }
+.article-row.reverse{ flex-direction: row-reverse; }
+@media (max-width:768px){ .article-row{ flex-direction:column; } .article-media{ width:100%; max-width:100%; } .article-media img{ height:180px; }} 
+
+
+/* Image & media styling */
+.article-media img, .article-img, .pest-media img, .article-media video{ border:4px solid rgba(0,0,0,0.06); border-radius:12px; box-shadow:0 14px 30px rgba(0,0,0,0.06); transition:transform .28s cubic-bezier(.2,.9,.2,1), box-shadow .28s; }
+.article-media img:hover, .article-img:hover{ transform: translateY(-6px) scale(1.02); box-shadow:0 22px 40px rgba(0,0,0,0.12); }
+.img-placeholder{ background:linear-gradient(90deg,#f0f0f0,#e9e9e9); min-height:120px; display:block; }
+img.lazy{ filter:blur(4px); transition: filter .4s ease, opacity .35s ease; }
+img.lazy:not([data-src]){ filter:none; }
+/* Small card entrance */
+.inlined-article{ opacity:0; transform: translateY(8px); transition: opacity .36s ease, transform .36s ease; }
+.inlined-article[style*="display:block"]{ opacity:1; transform:none; }
+
+</style>
+</head>
+<body>
+
+    <div class="toast-notification" id="toast" role="status" aria-live="polite" aria-atomic="true">
+        <i class="fas fa-check-circle check-icon" aria-hidden="true"></i> عميل جديد حجز الآن من مدينة الكويت!
+    </div>
+
+    <div class="floating-tools" role="complementary" aria-label="أدوات الوصول السريعة">
+      <a href="https://wa.me/96550255870" class="floating-btn whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+      <a href="tel:+96550255870" class="floating-btn call-btn" title="اتصال: +965 50255870"><i class="fas fa-phone"></i></a>
+    </div>
+    <button id="scroll-top" class="floating-btn scroll-top" aria-label="الذهاب لأعلى" title="الذهاب لأعلى">↑</button>
+
+    <nav>
+        <div class="container nav-container">
+            <a href="#" class="logo">المركز <span>الأمريكي</span></a>
+            <button class="nav-toggle" aria-label="قائمة" aria-expanded="false"><i class="fas fa-bars"></i></button>
+            <div class="nav-links">
+                <a href="#home">الرئيسية</a>
+                <a href="#services">خدماتنا</a>
+                <a href="articles.html#methods">طرق المكافحة</a>
+                <a href="articles.html">المقالات</a>
+                <a href="videos.html">الفيديوهات</a>
+                <a href="#testimonials">آراء العملاء</a>
+                <a href="https://wa.me/96550255870" target="_blank" rel="noopener noreferrer" class="nav-social whatsapp" aria-label="WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+                <a href="https://www.instagram.com/american9center/" target="_blank" rel="noopener noreferrer" class="nav-social instagram" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i><span class="nav-social-text">american9center</span></a>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main-content">
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>إبادة فورية للحشرات بضمان معتمد</h1>
+            <p>نستخدم أحدث التقنيات البريطانية للقضاء على الصراصير، البق، والقوارض نهائياً.</p>
+            <a href="tel:+96550255870" class="btn"><i class="fas fa-phone-alt"></i> اتصل الآن: +965 50255870</a>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="hero-cta">
+            <h2>خصم حصري 30% لعملاء الموقع الجدد</h2>
+            <p>العرض ساري لفترة محدودة - احجز موعدك اليوم</p>
+        </div>
+    </div>
+
+    <section id="pests">
+        <div class="container">
+            <h2 class="section-title">الحشرات التي نكافحها</h2>
+            
+            <div class="article-content">
+                <img src="https://cdn-ilbnpid.nitrocdn.com/YBPnObvEDpKsPgTpumlgqdMVHGbMRQgr/assets/images/optimized/rev-b248f5c/ggapest.com/oak/files/images/pests/cockroaches/cockroach-control.jpeg" alt="مكافحة صراصير" class="article-img">
+                <h2>إبادة الصراصير والنمل</h2>
+                <p>تعتبر الصراصير من أخطر الحشرات الناقلة للأمراض. نحن لا نقوم بالرش التقليدي فقط، بل نستخدم تقنية "الطعوم الجاذبة" التي تقضي على المستعمرة بالكامل من الجذور. مبيداتنا بدون رائحة وآمنة تماماً على المطبخ والأواني.</p>
+            </div>
+
+            <div class="article-content">
+                <img src="https://cdn.shopify.com/s/files/1/2420/9425/files/BedBugs_Mattress_large.jpg?v=1585168745" alt="بق الفراش" class="article-img">
+                <h2>مكافحة بق الفراش (Bed Bugs)</h2>
+                <p>البق يحتاج إلى معالجة خاصة جداً. نستخدم مزيجاً من المعالجة الحرارية والرش الكيميائي المجهري لضمان قتل البيض واليرقات، مما يضمن لك نوماً هادئاً من الليلة الأولى.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="services">
+        <h2 class="section-title">خدماتنا</h2>
+        <div class="container">
+            <div class="service">
+                <img src="images/1.png" alt="خدمة رش المبيدات" class="service-img" loading="lazy">
+                <h3>رش المبيدات</h3>
+                <p>نقدّم رشًا احترافيًا بمبيدات آمنة ومعتمدة للاستخدام المنزلي والتجاري.</p>
+            </div>
+            <div class="service">
+                <img src="images/2.png" alt="مكافحة القوارض" class="service-img" loading="lazy">
+                <h3>مكافحة القوارض</h3>
+                <p>حلول متكاملة للتخلص من الفئران والجرذان ومنع عودتها.</p>
+            </div>
+            <div class="service">
+                <img src="images/cockroach.svg" alt="مكافحة الصراصير" class="service-img" loading="lazy">
+                <h3>مكافحة الصراصير</h3>
+                <p>شاملة: طعوم، مصائد، ورش مموّجه حتى القضاء على المستعمرة.</p>
+            </div>
+            <div class="service">
+                <img src="images/mosquito.svg" alt="مكافحة البعوض" class="service-img" loading="lazy">
+                <h3>مكافحة البعوض</h3>
+                <p>برنامج وقائي لمكافحة يرقات البعوض وحماية الممتلكات.</p>
+            </div>
+            <div class="service">
+                <img src="images/termite.svg" alt="مكافحة النمل الأبيض" class="service-img" loading="lazy">
+                <h3>مكافحة النمل الأبيض</h3>
+                <p>فحوصات هيكلية وعلاجات منع انتكاس النمل الأبيض وحماية الخشب.</p>
+            </div>
+            <div class="service">
+                <h3>التعقيم والتنظيف</h3>
+                <p>خدمات تعقيم شاملة للمنازل والمباني ضد مسببات الأمراض والروائح.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery">
+        <h2 class="section-title">معرض الصور</h2>
+        <div class="container">
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="images/gallery-1.jpg" alt="صورة 1" loading="lazy"></div>
+                <div class="gallery-item"><img src="images/gallery-2.jpg" alt="صورة 2" loading="lazy"></div>
+                <div class="gallery-item"><img src="images/gallery-3.png" alt="صورة 3" loading="lazy"></div>
+                <div class="gallery-item"><img src="images/ant.svg" alt="نمل" loading="lazy"></div>
+                <div class="gallery-item"><img src="images/bedbug.svg" alt="بق" loading="lazy"></div>
+                <div class="gallery-item"><img src="images/cockroach.svg" alt="صراصير" loading="lazy"></div>
+                <div class="gallery-item"><img src="images/flea.svg" alt="براغيث" loading="lazy"></div>
+                <div class="gallery-item"><img src="images/fly.svg" alt="ذباب" loading="lazy"></div>
+                <div class="gallery-item"><img src="images/mosquito.svg" alt="بعوض" loading="lazy"></div>
+                <div class="gallery-item"><img src="images/rodent.svg" alt="قوارض" loading="lazy"></div>
+                <div class="gallery-item"><img src="images/termite.svg" alt="نمل أبيض" loading="lazy"></div>
+                <div class="gallery-item"><img src="images/silverfish.svg" alt="حشرة فضية" loading="lazy"></div>
+                <div class="gallery-item"><img src="images/pantry.svg" alt="مطبخ" loading="lazy"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="articles-preview">
+        <h2 class="section-title">المقالات</h2>
+<section id="articles-page" class="section">
+        <div class="container">
+            <div class="articles-main">
+                <h1 class="section-title">المقالات</h1>
+                <p class="lead">فيما يلي مقالات تفصيلية لكل آفة منتشرة في الكويت: أسباب الانتشار، المخاطر، وطرق المكافحة العملية التي ننفّذها.</p>
+
+                <!-- Place the detailed articles (methods) here -->
+                <div class="method-list" id="methods">
+                <section id="cockroaches" class="pest-section pest-cockroaches reveal-on-scroll">
+                    <div class="pest-row">
+                        <div class="pest-media"><img src="images/cockroach.svg" alt="صراصير" loading="lazy"></div>
+                        <div class="pest-content">
+                          <div class="pest-header"><img class="pest-icon" src="images/cockroach.svg" alt="صراصير"><h3>الصراصير</h3></div> 
+                    <p><strong>مقدمة:</strong> الصراصير من أكثر الآفات المنزلية شيوعًا في المناطق الحضرية بمنطقة الخليج، وتعرف بقدرتها الكبيرة على التكيف والاختباء في الشقوق ومصادر الغذاء والمياه، ما يجعل القضاء عليها تحدياً دون خطة متكاملة.</p>
+                    <h4>أسباب الانتشار</h4>
+                    <p>تنتشر الصراصير نتيجة توفر مصادر الغذاء المكشوفة (فتات الطعام، بقايا المطابخ)، وجود رطوبة وتسرب مياه، وجود مخلفات ومناطق قذرة داخل وخارج المنشآت، بالإضافة إلى سهولة انتقالها بين المباني عبر أنابيب الصرف، مزالق التهوية، والمواد الموردة (مثل الأجهزة المنزلية المستعملة والصناديق). المناخ الحار والرطب يسهل تكاثرها وإطالة فترة نشاطها.</p>
+                    <h4>طرق المكافحة</h4>
+                    <p>تتطلب مكافحة الصراصير مزيجاً من الإدارة البيئية والتدابير الفنية: 1) تنظيف دوري وإغلاق مصادر الغذاء والرطوبة، 2) سد الشقوق والفجوات حول المواسير والأبواب، 3) استخدام طعوم سامة محكمة التركيب (gel baits) موضعيًا داخل مخابئ الصراصير، 4) استخدام مبيدات رش مخصصة للمخابئ في أماكن التجمع، 5) تركيب مصائد لاصقة للمراقبة، 6) متابعة دورية من فريق متخصص لإعادة التقييم ومنع عودة الإصابات. الوقاية طويلة الأمد تعتمد على النظافة المستمرة وإدارة النفايات بشكل سليم.</p>
+                    <p><em>ملاحظة:</em> تجنب رش المبيدات بشكل عشوائي في المطابخ دون معالجة مصادر المشكلة، لأن ذلك قد يقلل فعالية الحلول ويعرض الأشخاص للأبخرة غير الضرورية.</p>
+                    <p><a class="btn read-more" href="#article-cockroaches" data-src="#article-cockroaches">اقرأ المزيد</a></p>
+                    <div class="pest-body" aria-hidden="true" data-loaded="false">
+      <h2>مقدمة مُعمّقة</h2>
+      <p>الصراصير ليست مجرد منظر مزعج—إنها كائنات مرنة للغاية قادرة على البقاء في بيئات شديدة التحمل. تتميز بسرعة التكاثر ووجودها في أماكن عميقة يصعب الوصول إليها (شقوق الجدار، خلف الأجهزة، فتحات التصريف). لذلك، السيطرة الحقيقية تتطلب مزيجًا من التعرف الدقيق على السلوك، إجراءات بيئية جيدة، وتدخلات فنية مهنية.</p>
+
+      <h2>دورة الحياة ولماذا تحتاج لحل متكامل</h2>
+      <p>تمر الصراصير بمراحل بيضة → يرقات → بالغة؛ البيض محمي ويصعب الوصول إليه عبر رذاذ سطحي فقط. القليل من الأنواع يمكن أن تتكاثر بسرعة مما يؤدي لانتشار سريع إذا لم تُستهدف المستعمرات المركزية. لهذا نستخدم طرقًا تجمع بين الطعوم الجاذبة التي تُنقل داخل المستعمرة، والمعالجات الموضعية في المخابئ، مع إجراءات تغيير البيئة المحيطة لمنع تبديل الموائل.</p>
+
+      <h2>أسباب الانتشار — تفاصيل عملية</h2>
+      <p>السبب الرئيسي هو توفر الغذاء والماء. أخطاء شائعة تزيد الانتشار: تدوين حاويات الطعام دون إغلاق، ترك حنفيات صغيرة أو تسريبات، ترك فتات الطعام في أسفل الأثاث، وتجمّع القمامة في أماكن مكشوفة. معدات ومستوردات مستعملة يمكن أن تدخل الحشرات إلى أي منزل بسهولة. في المباني المشتركة، تؤدي الفتحات والشقوق والإمداد المشترك لأنظمة التهوية والصرف إلى انتقال الحالات بين الوحدات.</p>
+
+      <h2>المخاطر الصحية</h2>
+      <p>الصراصير تنقل بكتيريا ممرِضة وتسبّب تلوثًا غذائيًا في المطابخ والمستودعات. كما قد تحفز الحساسية والربو لدى الأطفال والحسّاسين. المؤسسات الغذائية التي لا تتحكم بآفاتها قد تواجه غرامات أو إغلاقًا مؤقتًا من قبل الجهات الرقابية.</p>
+
+      <h2>العلاج العملي خطوة بخطوة</h2>
+      <ol>
+        <li><strong>التقييم المهني:</strong> فحص شامل لتحديد المستعمرات، نقاط الدخول، ومسارات الحركة باستخدام مصائد وملاحظات现场.</li>
+        <li><strong>التدخل البيئي:</strong> تجهيزات تنظيف عميق، غلق الكونتينرات، إصلاح التسريبات، وإزالة مصادر الغذاء المكشوفة.</li>
+        <li><strong>التدخل الكيميائي الذكي:</strong> استعمال طعوم جل ومواد بطيئة المفعول موضوعة داخل مخابئ محددة ولا تُعرض السطح العام للتلوث.</li>
+        <li><strong>اختيارات بديلة:</strong> استخدام مصائد لاصقة للمراقبة، وبعض الحالات قد تستفيد من خدمات تبريد/تدفئة محلِّية أو معالجة حرارية مركزة في أماكن التجمع الكبيرة.</li>
+        <li><strong>متابعة ومراقبة:</strong> جدولة زيارات مراجعة بعد 7 و30 يومًا للتأكد من انحسار النشاط واستبدال الطعوم إن لزم.</li>
+      </ol>
+
+      <h2>نصائح وقائية مفصّلة</h2>
+      <p>احفظ الحبوب والمواد الجافة في عبوات محكمة، اغسل الصحون فورًا، احرص على عدم ترك بقايا الأطعمة في قيعان الخزائن، وضع سلات النفايات بمكان مغطى وتفريغها يوميًا. افحص الأجهزة المستعملة قبل إدخالها للمنزل، واصنع خطة صيانة لسد الشقوق الصغيرة حول أنابيب الماء والكهرباء.</p>
+
+      <h2>فيديو توضيحي وشرح سريع</h2>
+      <div class="text-center-margin">
+        <iframe width="720" height="405" src="https://www.youtube.com/embed/aqz-KE-bpKQ" title="فيديو توضيحي عن مكافحة الصراصير" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+
+      <p>في حال وجود نشاط عالي أو ظهور علامات مقاومة (صعوبة في السيطرة بعد عدة محاولات)، من الأفضل استدعاء فريق مختص لإجراء تقييم ميداني ووضع برنامج علاج مخصص بأدوات احترافية وآمنة لكل بيئة. للتواصل السريع راسلنا على واتساب <a href="https://wa.me/96550255870">+965 50255870</a>.</p>
+    </div>
+                    </div>
+
+                <section id="bedbugs" class="pest-section pest-bedbugs reveal-on-scroll">
+                    <div class="pest-row">
+                        <div class="pest-media"><img src="images/bedbug.svg" alt="بق الفراش" loading="lazy"></div>
+                        <div class="pest-content">
+                          <div class="pest-header"><img class="pest-icon" src="images/bedbug.svg" alt="بق الفراش"><h3>بق الفراش</h3></div> 
+                    <p><strong>مقدمة:</strong> بق الفراش حشرات صغيرة تمتص الدم وتختبئ في الفراش، الشقوق، وإطارات السرير. إصابتها تسبب حكة شديدة وأحيانًا ردود فعل تحسسية، وهي من أسرع الآفات انتشارًا بسبب التنقل عبر الأمتعة والملابس والأثاث المستعار.</p>
+                    <h4>أسباب الانتشار</h4>
+                    <p>ينتشر بق الفراش عادة عبر أمتعة المسافرين، الأقمشة المستعملة، والانتقال من غرف مصابة إلى أخرى في المباني متعددة الوحدات. الإهمال في فحص أغراض السفر، شراء الأثاث المستعمل بدون فحص، ووجود تشققات وظروف بيئية تسمح بوجود مخابئ مناسبة كلها عوامل تزيد من احتمالية الانتشار.</p>
+                    <h4>طرق المكافحة</h4>
+                    <p>المعالجة تتطلب خطة متدرجة: 1) كشف وتحديد أماكن الاختباء عبر فحص الفراش، الشقوق، الأثاث، والستائر، 2) تنظيف وغسل الأغطية والملاءات والمفروشات بدرجات حرارة عالية أو تجفيفها لمدة كافية، 3) استخدام المعالجات الحرارية الاحترافية لزيادة درجة الحرارة داخل الغرف مما يقتل البويضات والحشرات البالغة، 4) رش مبيدات متخصصة مضادة لبق الفراش من قِبل خبراء مع تطبيق مبيدات مطابقة للمواصفات، 5) متابعة وتكرار المعالجة حتى اختفاء علامات الإصابة، وإجراءات وقائية مثل تغطية المراتب بأغطية مضادة للحشرات وتقليل الفجوات في الأثاث.</p>
+                    <p><a class="btn read-more" href="#article-bedbugs" data-src="#article-bedbugs">اقرأ المزيد</a></p>
+                    <div class="pest-body" aria-hidden="true" data-loaded="false">
+      <h2>مقدّمة مفصّلة</h2>
+      <p>بق الفراش (Bed bugs) مشكلة متزايدة في البيئات الحضرية نتيجة السفر، تداول الأثاث المستعمل، والتراخي في بعض ممارسات النظافة. هذه الحشرات تختبئ في أماكن ضيقة للغاية (خياطة المراتب، إطارات الأسرة، خلف اللوحات الكهربائية) وتخرج ليلاً لتتغذى على الدم، مما يسبب اضطرابًا في النوم، خسائر مادية نتيجة تغيير المفروشات، ومضاعفات جلدية لدى المصابين بحساسية.</p>
+
+      <h2>دورة الحياة ولماذا يصعب القضاء عليها</h2>
+      <p>تضع أنثى بق الفراش عشرات البيضات الصغيرة التي تكون مقاومة إلى حد بعيد للعلاجات السطحية، وتتكيف اليرقات مع درجات الحرارة المختلفة. لذلك فإن المعالجة الفعالة تدمج عدة تقنيات: المعالجة الحرارية لقتل البيض، المعالجات الكيميائية المستهدفة للمخابئ، وإجراءات بيئية لمنع عودة المستعمرة.</p>
+
+      <h2>أسباب الانتشار ومصادر الخطر</h2>
+      <p>ينتشر بق الفراش عبر الأمتعة، المفروشات المستعملة، والانتقال بين الشقق عبر الشقوق والممرات. التأخر في الكشف، تأجيل الغسيل أو التنظيف بعد السفر، وشراء الأثاث المستعمل بدون فحص يزيد من فرص الانتشار بسرعة. المباني متعددة الوحدات تحتاج تنسيق فني بين الجيران لمنع الانتقال من شقة إلى أخرى.</p>
+
+      <h2>نظام مكافحتي المتكامل لبق الفراش (خطوة بخطوة)</h2>
+      <ol>
+        <li><strong>الفحص والتشخيص:</strong> فنيونا يفحصون الفراش، الشقوق، الأرائك، الستائر، والمفروشات لتحديد تصور شامل لمكان الانتشار.</li>
+        <li><strong>التجهيز قبل المعالجة:</strong> تعليمات لغسل الملابس وكيها، إخراج الألعاب والملابس الحساسة في أكياس مغلقة مؤقتاً، وإفراغ المساحات للوصول للمخابئ.</li>
+        <li><strong>العلاج الحراري:</strong> رفع درجة حرارة الغرفة أحيانًا إلى حدود تقلل فرص بقاء البيض، وهذه الطريقة فعالة ضد جميع الأطوار الحية.</li>
+        <li><strong>رش موضعي ومتابعة:</strong> استخدام مبيدات متوافقة مع المواصفات المهنية ورشٍ موضعي في الشقوق مع إعادة تقييم بعد 7-14 يومًا.</li>
+        <li><strong>الوقاية الطويلة:</strong> تغطية المراتب بأغطية مضادة للحشرات، إحكام إغلاق الشقوق، ومتابعة دورية لضمان عدم عودة الإصابة.</li>
+      </ol>
+
+      <h2>نصائح للعافية بعد المعالجة</h2>
+      <p>بعد المعالجة يُنصح بغسل جميع الأقمشة والملابس على درجة حرارة عالية إن أمكن، والامتناع عن إعادة إدخال الأثاث المستعمل دون فحص. نوصي بوضع فخاخ مراقبة مؤقتة لفترة للتأكد من عدم وجود بقايا نشاط.</p>
+
+      <h2>فيديو توضيحي</h2>
+      <div class="text-center-margin">
+        <iframe width="720" height="405" src="https://www.youtube.com/embed/aqz-KE-bpKQ" title="فيديو توضيحي عن مكافحة بق الفراش" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <noscript>
+          <p>إذا لم يعمل الفيديو، يمكنك مشاهدته مباشرةً على <a href="https://www.youtube.com/watch?v=aqz-KE-bpKQ" target="_blank" rel="noopener">YouTube</a>.</p>
+        </noscript>
+      </div>
+
+      <h2>أسئلة شائعة قصيرة</h2>
+      <p><strong>هل يختفي بق الفراش من المرة الأولى؟</strong> في بعض الحالات قد تحتاج عدة جلسات ومتابعة لأن البيض قد يحتاج لعمليات متعددة لإزالته تمامًا.</p>
+      <p><strong>هل المعالجة آمنة للأطفال والحيوانات الأليفة؟</strong> نستخدم منتجات مهنية مع تعليمات أمان؛ عادة تتضمن المعالجة إخلاء مؤقت للمكان واتباع إرشادات ما بعد العلاج لسلامة الجميع.</p>
+
+      <p>لموعد تقييم أو إرشاد متخصص تواصل معنا على <a href="https://wa.me/96550255870">واتساب +965 50255870</a> أو عبر نموذج الاتصال، وسنقدّم خطة علاجية مخصصة تضمن القضاء والمتابعة.</p>
+    </div>
+                    </div>
+                    </section>
+        <div class="container">
+            <p class="lead">اطّلع على مقالاتنا المتخصصة حول الآفات: أسباب الانتشار وطرق المكافحة العملية لكل نوع. للمقالات التفصيلية اضغط على الزر أدناه.</p>
+            <div class="center-wrap">
+                <a href="articles.html" class="btn">اقرأ المقالات كاملة</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2 class="section-title">ثقة عملائنا</h2>
+            <div class="testimonials-carousel">
+                <button class="carousel-prev" aria-label="السابق">‹</button>
+                <div class="testimonial-track">
+                    <div class="testimonial-card card">
+                        <div class="testimonial-inner">
+                            <img src="images/client1.svg" alt="أبو فهد" class="client-avatar">
+                            <div class="client-company">المركز الأمريكي</div>
+                            <h3>★★★★★</h3>
+                            <p>"أفضل شركة تعاملت معها في الكويت، دقة في المواعيد واحترافية كبيرة."</p>
+                            <small>- أبو فهد</small>
+                        </div>
+                    </div>
+                    <div class="testimonial-card card">
+                        <div class="testimonial-inner">
+                            <img src="images/client2.svg" alt="أم سارة" class="client-avatar">
+                            <div class="client-company">المركز الأمريكي</div>
+                            <h3>★★★★★</h3>
+                            <p>"تخلصت من مشكلة البق نهائياً بعد معاناة شهور. شكراً لكم."</p>
+                            <small>- أم سارة</small>
+                        </div>
+                    </div>
+                    <div class="testimonial-card card">
+                        <div class="testimonial-inner">
+                            <img src="images/client3.svg" alt="خالد الحمود" class="client-avatar">
+                            <div class="client-company">المركز الأمريكي</div>
+                            <h3>★★★★★</h3>
+                            <p>"الخدمة سريعة والسعر ممتاز، أنصح بهم لكل من يعاني من الحشرات."</p>
+                            <small>- خالد الحمود</small>
+                        </div>
+                    </div>
+                    <div class="testimonial-card card">
+                        <div class="testimonial-inner">
+                            <img src="images/client1.svg" alt="ليلى العوض" class="client-avatar">
+                            <div class="client-company">المركز الأمريكي</div>
+                            <h3>★★★★★</h3>
+                            <p>"الفريق شرح لي الخطة بالكامل وتابع حتى اختفت الحشرات تماماً."</p>
+                            <small>- ليلى العوض</small>
+                        </div>
+                    </div>
+                    <div class="testimonial-card card">
+                        <div class="testimonial-inner">
+                            <img src="images/client2.svg" alt="أحمد بدر" class="client-avatar">
+                            <div class="client-company">المركز الأمريكي</div>
+                            <h3>★★★★★</h3>
+                            <p>"محترفون وملتزمون بالمواعيد، والنظافة بعد العمل كانت رائعة."</p>
+                            <small>- أحمد بدر</small>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-next" aria-label="التالي">›</button>
+                <div class="carousel-dots" role="tablist" aria-label="نقاط الشهادات"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="methods-preview">
+        <h2 class="section-title">طرق الرش والمكافحة</h2>
+        <div class="container">
+            <p class="lead">تصفّح طرق الرش والمكافحة لكل آفة بتفصيل عملي واحترافي — <a href="articles.html#methods">اقرأ المقالات التفصيلية</a>.</p>
+        </div>
+    </section> 
+
+    <section id="contact">
+        <h2 class="section-title">تواصل معنا</h2>
+        <div class="container contact-grid">
+            <div class="contact-card">
+                <h3>جاهزون للمساعدة</h3>
+                <p>اتصل أو أرسل رسالة عبر واتساب وسنعود إليك فورًا.</p>
+                <a class="btn" href="https://wa.me/96550255870" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp - تواصل عبر واتساب"><i class="fab fa-whatsapp" aria-hidden="true"></i> تواصل عبر واتساب</a>
+                <a class="btn" href="tel:+96550255870"><i class="fas fa-phone"></i> +965 50255870</a>
+            </div>
+            <div class="contact-form">
+                <form id="contact-form">
+                    <input type="tel" name="phone" placeholder="رقم الهاتف" required>
+                    <textarea name="message" placeholder="رسالتك..." required></textarea>
+                    <button class="btn" type="submit">إرسال عبر واتساب</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Notifications & Lightbox -->
+    <div id="order-notification" class="order-popup" role="status" aria-live="polite">
+        <i class="fas fa-bell pop-icon"></i>
+        <div class="pop-text">
+            <strong id="order-title">طلب خدمة جديد</strong>
+            <div><span id="customer-name">اي اسمار خليجيه</span> — <small id="customer-area"></small></div>
+        </div>
+    </div>
+
+    <div id="sales-notification" class="sales-popup" role="status" aria-live="polite">
+        <div class="pop-avatar">!</div>
+        <div class="pop-info">
+            <p id="pop-user"></p>
+            <small id="pop-action"></small>
+        </div>
+    </div>
+
+    <div id="lightbox" class="lightbox" aria-hidden="true">
+        <button class="lightbox-close" aria-label="إغلاق">×</button>
+        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100'></svg>" alt="صورة المعرض">
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <a href="#" class="logo"><img src="images/logo.svg" alt="logo" loading="lazy"></a>
+                    <p>خدمات احترافية لمكافحة الحشرات والقوارض — خدمة سريعة ومضمونة.</p>
+                </div>
+                <div class="footer-contact">
+                    <h4>تواصل معنا</h4>
+                    <p><a href="tel:+96550255870">+965 50255870</a></p>
+                    <p><a href="https://wa.me/96550255870" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">WhatsApp: 96550255870</a></p>
+                    <p><a href="https://www.instagram.com/american9center/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">Instagram</a></p> 
+                </div>
+            </div>
+            <p class="copy">© 2026 المركز الأمريكي لمكافحة الحشرات والقوارض. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <script>
+        // إظهار التنبيه بشكل دوري
+        function showToast() {
+            const toast = document.getElementById('toast');
+            toast.classList.add('show');
+            setTimeout(() => toast.classList.remove('show'), 4000);
+        }
+        
+        setInterval(showToast, 20000); // كل 20 ثانية لتجربة مستخدم أفضل
+        setTimeout(showToast, 5000); // أول مرة بعد 5 ثوانٍ
+    </script>
+<script>
+// 1. إخفاء اللودر
+window.onload = () => {
+    setTimeout(() => {
+        document.getElementById('loader').style.display = 'none';
+    }, 1500);
+};
+
+// 2. إعداد الحركات عند التمرير
+if (typeof ScrollReveal !== 'undefined') {
+    if (window.innerWidth > 600) {
+        ScrollReveal().reveal('.reveal-top', { origin: 'top', distance: '80px', duration: 2000 });
+        ScrollReveal().reveal('.reveal-bottom', { origin: 'bottom', distance: '80px', duration: 2000 });
+        ScrollReveal().reveal('.reveal-left', { origin: 'right', distance: '100px', duration: 1500, delay: 200 });
+        ScrollReveal().reveal('.reveal-right', { origin: 'left', distance: '100px', duration: 1500, delay: 200 });
+    } else {
+        // lighter reveals for phones
+        ScrollReveal().reveal('.reveal-top, .reveal-bottom, .reveal-left, .reveal-right', { distance: '40px', duration: 900 });
+    }
+}
+
+// 3. تأثير التمرير على الهيدر
+window.onscroll = () => {
+    const header = document.querySelector('.glass-header');
+    if (window.scrollY > 100) {
+        header.style.padding = "10px 5%";
+        header.style.background = "rgba(0, 31, 63, 0.95)";
+    } else {
+        header.style.padding = "20px 5%";
+        header.style.background = "rgba(0, 31, 63, 0.85)";
+    }
+};
+
+console.log("تم تشغيل محرك الموقع الجبار لشركة الأمريكية الكويتية - 50255870");
+// مصفوفة البيانات لإشعارات الطلبات
+const names = ["أبو حمد", "أم فيصل", "يوسف الكندري", "سارة", "أبو غانم", "عبدالله", "أم مبارك"];
+const areas = ["حولي", "الجهراء", "الروضة", "الأحمدي", "الفحيحيل", "صباح السالم", "خيطان", "السالمية", "الفروانية", "الفحيحيل", "الرميثية", "الشعيبة", "العبدلي", "القرين", "المنقف", "الدوحة"];
+const services = ["مكافحة الصراصير", "إبادة بق الفراش", "رش القوارض", "تعقيم المنزل", "مكافحة النمل الأبيض", "مكافحة البعوض", "مكافحة الذباب", "مكافحة البراغيث"];
+
+function showNotification() {
+    const popup = document.getElementById('order-notification');
+    
+    // اختيار بيانات عشوائية
+    const randomArea = areas[Math.floor(Math.random() * areas.length)];
+    const randomService = services[Math.floor(Math.random() * services.length)];
+
+    // تحديث المحتوى (حذف اسم العميل كما طُلب)
+    document.getElementById('order-title').innerText = `طلب خدمة ${randomService}`;
+    document.getElementById('customer-area').innerText = randomArea;
+
+    // إظهار النافذة
+    popup.classList.add('show');
+
+    // إخفاؤها بعد 5 ثوانٍ
+    setTimeout(() => {
+        popup.classList.remove('show');
+    }, 5000);
+}
+
+// تشغيل الإشعار كل 15 دقيقة (900000 مللي ثانية) لتقليل التشويش وتحسين الأداء
+setInterval(showNotification, 900000);
+
+// تشغيل أول إشعار بعد 30 ثانية من فتح الموقع
+setTimeout(showNotification, 30000);
+// بيانات الإشعارات الوهمية لزيادة الثقة
+const customers = [
+    { name: "أبو حمد", area: "السالمية", service: "مكافحة البق" },
+    { name: "أم فيصل", area: "الجهراء", service: "إبادة الصراصير" },
+    { name: "يوسف الكندري", area: "الرميثية", service: "رش القوارض" },
+    { name: "سارة العجمي", area: "الأحمدي", service: "حقن الأرضة" },
+    { name: "أبو سلطان", area: "الفروانية", service: "تعقيم المنزل" },
+    { name: "مبارك", area: "صباح السالم", service: "إبادة النمل الأسود" }
+];
+
+function triggerNotification() {
+    const popup = document.getElementById('sales-notification');
+    
+    // اختيار بيانات عشوائية من القوائم
+    const randomArea = areas[Math.floor(Math.random() * areas.length)];
+    const randomService = services[Math.floor(Math.random() * services.length)];
+
+    // تحديث المحتوى - عرض اسم العميل الثابت كما طلبت ثم المنطقة والخدمة
+    document.getElementById('pop-user').innerText = 'اي اسمار خليجيه';
+    document.getElementById('pop-action').innerText = `طلب خدمة ${randomService} — ${randomArea}`;
+
+    // إظهار النافذة
+    popup.classList.add('active');
+
+    // إخفاء النافذة بعد 6 ثوانٍ
+    setTimeout(() => {
+        popup.classList.remove('active');
+    }, 6000);
+}
+
+// تشغيل أول إشعار بعد 30 ثانية من فتح الموقع (يمنح فرصة للمستخدم لمشاهدة المحتوى أولاً)
+setTimeout(triggerNotification, 30000);
+
+// تكرار الإشعارات كل 15 دقيقة (900000 مللي ثانية)
+setInterval(triggerNotification, 900000);
+
+// Placeholder for future interactivity, e.g., dynamic article loading or image sliders.
+
+// Lightbox for gallery
+const galleryItems = document.querySelectorAll('.gallery-item img');
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = lightbox ? lightbox.querySelector('img') : null;
+const lightboxClose = document.querySelector('.lightbox-close');
+
+// Add rotating captions to the main index gallery
+(function(){
+  const gallery = document.querySelectorAll('.gallery-grid .gallery-item');
+  const idxCaptions = [
+    'طرق الرش — بدون رائحة وبدون الحاجة لمغادرة المنزل',
+    'فريقنا المهني — إجراءات آمنة ومثالية للاستخدام المنزلي',
+    'تعقيم احترافي دون تعطيل الروتين اليومي',
+    'حلول فعالة وبدون آثار جانبية للرائحة',
+    'خدمة سريعة وجودة معتمدة'
+  ];
+  gallery.forEach((g,i)=>{
+    if(!g.querySelector('.gallery-caption')){
+      const p = document.createElement('p'); p.className='gallery-caption'; p.innerText = idxCaptions[i % idxCaptions.length];
+      g.appendChild(p);
+    }
+  });
+})();
+
+if (galleryItems && lightbox && lightboxImg) {
+    let lbLastFocused = null;
+    const lbFocusableSelector = 'a[href], button:not([disabled]), textarea, input, select, [tabindex]:not([tabindex="-1"])';
+    function lbTrapHandler(e){
+        if (e.key === 'Tab'){
+            const nodes = Array.from(lightbox.querySelectorAll(lbFocusableSelector));
+            if(nodes.length === 0){ e.preventDefault(); return; }
+            const first = nodes[0], last = nodes[nodes.length-1];
+            if (e.shiftKey && document.activeElement === first){ e.preventDefault(); last.focus(); }
+            else if (!e.shiftKey && document.activeElement === last){ e.preventDefault(); first.focus(); }
+        }
+    }
+
+    galleryItems.forEach(img => {
+        img.addEventListener('click', (ev) => {
+            lbLastFocused = ev.currentTarget;
+            lightboxImg.src = img.src;
+            lightbox.classList.add('show');
+            lightbox.setAttribute('aria-hidden','false');
+            const cb = lightbox.querySelector('.lightbox-close');
+            if(cb) { cb.focus(); }
+            document.addEventListener('keydown', lbTrapHandler);
+        });
+    });
+
+    if (lightboxClose) {
+        lightboxClose.addEventListener('click', () => {
+            lightbox.classList.remove('show');
+            lightbox.setAttribute('aria-hidden','true');
+            document.removeEventListener('keydown', lbTrapHandler);
+            if (lbLastFocused && lbLastFocused.focus) lbLastFocused.focus();
+        });
+    }
+
+    // close when clicking outside image
+    if (lightbox) {
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                lightbox.classList.remove('show');
+                lightbox.setAttribute('aria-hidden','true');
+                document.removeEventListener('keydown', lbTrapHandler);
+                if (lbLastFocused && lbLastFocused.focus) lbLastFocused.focus();
+            }
+        });
+        // touch: swipe down to close
+        let lbStartY = 0;
+        lightbox.addEventListener('touchstart', (e) => { lbStartY = e.touches[0].clientY; });
+        lightbox.addEventListener('touchmove', (e) => {
+            const dy = e.touches[0].clientY - lbStartY;
+            if (dy > 100) {
+                lightbox.classList.remove('show');
+                lightbox.setAttribute('aria-hidden','true');
+                document.removeEventListener('keydown', lbTrapHandler);
+                if (lbLastFocused && lbLastFocused.focus) lbLastFocused.focus();
+            }
+        });
+    }
+}
+
+// Contact form handler (simple demo)
+const contactForm = document.getElementById('contact-form');
+if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const phone = contactForm.phone.value.trim();
+        const msg = contactForm.message.value.trim();
+        // Open WhatsApp with pre-filled message to business number
+        const businessNumber = '96550255870';
+        const text = `رقم المرسل: ${phone}\nالرسالة: ${msg}`;
+        const waUrl = `https://wa.me/${businessNumber}?text=${encodeURIComponent(text)}`;
+        window.open(waUrl, '_blank');
+        contactForm.reset();
+    });
+}
+
+// Mobile nav toggle behaviour (added for smaller screens)
+const navToggle = document.querySelector('.nav-toggle');
+const navLinks = document.querySelector('.nav-links');
+if (navToggle && navLinks) {
+    navToggle.addEventListener('click', () => {
+        const isOpen = navLinks.classList.toggle('open');
+        navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+    navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+    }));
+}
+
+// Testimonials carousel (dots, swipe and keyboard)
+(function() {
+    const carousel = document.querySelector('.testimonials-carousel');
+    const track = document.querySelector('.testimonial-track');
+    const cards = Array.from(document.querySelectorAll('.testimonial-card'));
+    const prevBtn = document.querySelector('.carousel-prev');
+    const nextBtn = document.querySelector('.carousel-next');
+    const dotsContainer = document.querySelector('.carousel-dots');
+    if (!track || cards.length === 0) return;
+
+    let currentPage = 0;
+    let auto;
+    let startX = 0;
+    let deltaX = 0;
+    const gap = parseInt(getComputedStyle(track).gap) || 0;
+
+    function getCardWidth() { return cards[0].getBoundingClientRect().width; }
+    function getVisibleCount() { const cardW = getCardWidth(); return Math.max(1, Math.floor(track.parentElement.getBoundingClientRect().width / (cardW + gap))); }
+    function getPages() { const visible = getVisibleCount(); return Math.max(1, Math.ceil(cards.length / visible)); }
+
+    function buildDots() {
+        if (!dotsContainer) return;
+        dotsContainer.innerHTML = '';
+        const pages = getPages();
+        for (let i=0;i<pages;i++) {
+            const d = document.createElement('button');
+            d.className = 'carousel-dot';
+            d.setAttribute('aria-label', `الصفحة ${i+1}`);
+            d.setAttribute('role','tab');
+            d.addEventListener('click', () => { showSlide(i); restartAuto(); });
+            dotsContainer.appendChild(d);
+        }
+        updateDots();
+    }
+
+    function updateDots(){
+        if (!dotsContainer) return;
+        Array.from(dotsContainer.children).forEach((el, i) => {
+            el.classList.toggle('active', i === currentPage);
+            el.setAttribute('aria-selected', i === currentPage ? 'true' : 'false');
+            el.tabIndex = i === currentPage ? 0 : -1;
+        });
+    }
+
+    function showSlide(pageIndex){
+        const pages = getPages();
+        if (pageIndex < 0) pageIndex = pages -1;
+        if (pageIndex >= pages) pageIndex = 0;
+        currentPage = pageIndex;
+        const cardWidth = getCardWidth();
+        const visible = getVisibleCount();
+        const offset = Math.round((cardWidth + gap) * pageIndex * visible);
+        track.style.transform = `translateX(-${offset}px)`;
+        updateDots();
+    }
+
+    function nextPage(){ showSlide(currentPage +1); }
+    function prevPage(){ showSlide(currentPage -1); }
+
+    nextBtn && nextBtn.addEventListener('click', () => { nextPage(); restartAuto(); });
+    prevBtn && prevBtn.addEventListener('click', () => { prevPage(); restartAuto(); });
+
+    function startAuto(){ auto = setInterval(() => nextPage(), 5000); }
+    function stopAuto(){ clearInterval(auto); }
+    function restartAuto(){ stopAuto(); startAuto(); }
+
+    track.addEventListener('mouseenter', stopAuto);
+    track.addEventListener('mouseleave', startAuto);
+    prevBtn && prevBtn.addEventListener('mouseenter', stopAuto);
+    prevBtn && prevBtn.addEventListener('mouseleave', startAuto);
+    nextBtn && nextBtn.addEventListener('mouseenter', stopAuto);
+    nextBtn && nextBtn.addEventListener('mouseleave', startAuto);
+
+    // touch handlers
+    let isTouching = false;
+    track.addEventListener('touchstart', (e) => {
+        isTouching = true; stopAuto(); startX = e.touches[0].clientX; deltaX = 0;
+    }, {passive:true});
+    track.addEventListener('touchmove', (e) => { if (!isTouching) return; deltaX = e.touches[0].clientX - startX; }, {passive:true});
+    track.addEventListener('touchend', (e) => { isTouching = false; if (Math.abs(deltaX) > 40) { if (deltaX < 0) nextPage(); else prevPage(); } restartAuto(); });
+
+    // keyboard navigation
+    carousel && carousel.setAttribute('tabindex','0');
+    carousel && carousel.addEventListener('keydown', (e) => { if (e.key === 'ArrowLeft') { prevPage(); restartAuto(); } if (e.key === 'ArrowRight') { nextPage(); restartAuto(); } });
+
+    // responsive
+    window.addEventListener('resize', () => { buildDots(); showSlide(currentPage); });
+
+    // init
+    buildDots();
+    showSlide(0);
+    startAuto();
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) { stopAuto(); }
+
+})();
+
+// Parallax for pest hero images (subtle movement)
+(function(){
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const heroes = document.querySelectorAll('.pest-hero img');
+    if (!heroes.length) return;
+    let ticking = false;
+    function update(){
+        const center = window.innerHeight / 2;
+        heroes.forEach(img => {
+            const rect = img.getBoundingClientRect();
+            const dist = rect.top + rect.height/2 - center; // distance from center
+            const translate = Math.max(Math.min(-dist * 0.06, 40), -40); // clamp
+            img.style.transform = `translateY(${translate}px)`;
+        });
+        ticking = false;
+    }
+    function onScroll(){ if (!ticking){ window.requestAnimationFrame(update); ticking = true; }}
+    window.addEventListener('scroll', onScroll, {passive:true});
+    window.addEventListener('resize', onScroll);
+    // init position
+    update();
+})();
+
+// Video modal playback (supports YouTube embeds and local MP4)
+(function(){
+    const videoItems = Array.from(document.querySelectorAll('.video-item'));
+    const videoModal = document.getElementById('video-modal');
+    const videoWrap = videoModal ? videoModal.querySelector('.video-wrap') : null;
+    const videoClose = videoModal ? videoModal.querySelector('.video-close') : null;
+    if (!videoModal || !videoWrap || videoItems.length === 0) return;
+
+    let vmLastFocused = null;
+    const vmFocusableSelector = 'a[href], button:not([disabled]), textarea, input, select, [tabindex]:not([tabindex="-1"])';
+    function vmTrapHandler(e){
+        if (e.key === 'Tab'){
+            const nodes = Array.from(videoModal.querySelectorAll(vmFocusableSelector));
+            if(nodes.length === 0){ e.preventDefault(); return; }
+            const first = nodes[0], last = nodes[nodes.length-1];
+            if (e.shiftKey && document.activeElement === first){ e.preventDefault(); last.focus(); }
+            else if (!e.shiftKey && document.activeElement === last){ e.preventDefault(); first.focus(); }
+        }
+    }
+
+    function openVideo(type, src){
+        // clear
+        videoWrap.innerHTML = '';
+        if (type === 'youtube'){
+            const iframe = document.createElement('iframe');
+            iframe.src = src + (src.indexOf('?') === -1 ? '?rel=0' : '&rel=0');
+            iframe.allow = 'autoplay; encrypted-media; picture-in-picture';
+            iframe.setAttribute('allowfullscreen','');
+            videoWrap.appendChild(iframe);
+        } else {
+            const v = document.createElement('video');
+            v.src = src;
+            v.controls = true;
+            v.autoplay = true;
+            videoWrap.appendChild(v);
+        }
+        vmLastFocused = document.activeElement;
+        videoModal.classList.add('show');
+        videoModal.setAttribute('aria-hidden','false');
+        const cb = videoModal.querySelector('.video-close');
+        if(cb) cb.focus();
+        document.addEventListener('keydown', vmTrapHandler);
+    }
+
+    function closeVideo(){
+        videoModal.classList.remove('show');
+        videoModal.setAttribute('aria-hidden','true');
+        // stop and remove
+        videoWrap.innerHTML = '';
+        document.removeEventListener('keydown', vmTrapHandler);
+        if (vmLastFocused && vmLastFocused.focus) vmLastFocused.focus();
+    }
+
+    videoItems.forEach(el => {
+        el.addEventListener('click', () => {
+            const type = el.dataset.type;
+            const src = el.dataset.src;
+            if (!src) return;
+            openVideo(type, src);
+        });
+    });
+
+    videoClose && videoClose.addEventListener('click', closeVideo);
+    videoModal.addEventListener('click', (e) => { if (e.target === videoModal) closeVideo(); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeVideo(); });
+
+    // touch swipe down to close
+    let startY = 0;
+    videoModal.addEventListener('touchstart', (e) => { startY = e.touches[0].clientY; });
+    videoModal.addEventListener('touchmove', (e) => { const dy = e.touches[0].clientY - startY; if (dy > 120) closeVideo(); }, {passive:true});
+})();
+
+// Scroll to top button
+const scrollBtn = document.getElementById('scroll-top');
+if (scrollBtn) {
+  scrollBtn.style.display = 'none';
+  window.addEventListener('scroll', () => { scrollBtn.style.display = window.scrollY > 300 ? 'flex' : 'none'; }, {passive:true});
+  scrollBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+}
+
+// Articles helper: TOC builder, reveal on scroll, read-more toggles, progress bar
+document.addEventListener('DOMContentLoaded', () => {
+  // Build TOC if container present
+  const methods = Array.from(document.querySelectorAll('.pest-section'));
+  const tocEl = document.createElement('div'); tocEl.className = 'toc';
+  const tocTitle = document.createElement('h4'); tocTitle.innerText = 'جدول المحتويات'; tocEl.appendChild(tocTitle);
+  methods.forEach(sec => {
+    const id = sec.id || sec.dataset.id;
+    const title = (sec.querySelector('h3')||{}).innerText || id || 'قسم';
+    const a = document.createElement('a'); a.href = `#${id}`; a.innerText = title; a.addEventListener('click', (e)=>{ e.preventDefault(); document.querySelector(`#${id}`).scrollIntoView({behavior:'smooth', block:'start'}); history.replaceState(null,'',`#${id}`); });
+    tocEl.appendChild(a);
+    // add small toggle button for mobile
+    const body = sec.querySelector('.pest-body');
+    if(body){
+      const btn = document.createElement('button'); btn.className='pest-toggle'; btn.innerText='اقرأ أكثر';
+      btn.addEventListener('click', ()=>{ body.classList.toggle('expanded'); btn.innerText = body.classList.contains('expanded') ? 'اقرأ أقل' : 'اقرأ أكثر';});
+      sec.appendChild(btn);
+    }
+  });
+  // attach TOC if aside exists
+  const aside = document.querySelector('.articles-aside');
+  if(aside) aside.appendChild(tocEl);
+
+  // Intersection Observer for reveal-on-scroll and active TOC
+  const revealItems = document.querySelectorAll('.reveal-on-scroll');
+  const tocLinks = tocEl ? Array.from(tocEl.querySelectorAll('a')) : [];
+  const obs = new IntersectionObserver((entries)=>{
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('in-view');
+        // set active toc
+        const id = entry.target.id;
+        tocLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === `#${id}`));
+      }
+    });
+  }, { root:null, threshold: 0.18 });
+  revealItems.forEach(i => obs.observe(i));
+
+  // Progress bar
+  const prog = document.createElement('div'); prog.id='page-progress'; document.body.appendChild(prog);
+  window.addEventListener('scroll', () => {
+    const sc = window.scrollY; const h = document.documentElement.scrollHeight - window.innerHeight; const pct = h>0 ? (sc/h)*100 : 0; prog.style.width = pct + '%';
+  }, {passive:true});
+
+  // Read-more in-page loader: fetch article fragment and insert into the section
+  document.addEventListener('click', async (e) => {
+    const el = e.target.closest && e.target.closest('.read-more');
+    if (!el) return;
+    e.preventDefault();
+    const src = el.getAttribute('data-src') || el.getAttribute('href');
+    if(!src) return window.location.href = el.href;
+    const parent = el.closest('.pest-content');
+    if(!parent) return;
+    const body = parent.querySelector('.pest-body');
+    // toggle if already loaded
+    if(body && body.classList.contains('expanded')){ body.classList.remove('expanded'); body.setAttribute('aria-hidden','true'); el.innerText = 'اقرأ المزيد'; parent.querySelector('.pest-media img') && parent.querySelector('.pest-media img').focus(); return; }
+    // if content already loaded once, just expand
+    if(body && body.dataset.loaded === 'true'){ body.classList.add('expanded'); body.setAttribute('aria-hidden','false'); el.innerText = 'اقرأ أقل'; parent.scrollIntoView({behavior:'smooth', block:'start'}); return; }
+
+    try{
+      // fetch the article page and extract article-content
+      const res = await fetch(src, {cache:'no-store'});
+      if(!res.ok) throw new Error('Fetch failed');
+      const text = await res.text();
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(text, 'text/html');
+      const art = doc.querySelector('.article-content');
+      const content = art ? art.innerHTML : '<p>المقال غير متوفر حالياً.</p>';
+      if(!body){
+        const wrapper = document.createElement('div'); wrapper.className='pest-body expanded'; wrapper.setAttribute('aria-hidden','false'); wrapper.innerHTML = content; parent.appendChild(wrapper);
+      } else {
+        body.innerHTML = content; body.dataset.loaded='true'; body.classList.add('expanded'); body.setAttribute('aria-hidden','false');
+      }
+      el.innerText = 'اقرأ أقل';
+      parent.scrollIntoView({behavior:'smooth', block:'start'});
+    }catch(err){
+      console.warn('Failed to load article fragment', err);
+      // fallback: navigate to the page
+      window.location.href = src;
+    }
+  });
+
+  // Populate gallery with images from /images (click opens main lightbox)
+  const galleryGrid = document.getElementById('articles-gallery-grid');
+  if (galleryGrid) {
+    // curated list of files that exist in repo (avoid runtime 404s)
+    const files = [
+      "images/about-team.svg", "images/service-spray.svg", "images/service-inspection.svg", "images/service-follow-up.svg", "images/team-member-1.svg", "images/team-member-2.svg",
+      "images/gallery-1.jpg", "images/gallery-2.jpg", "images/gallery-3.png", "images/gallery-4.jpg", "images/14.png.jpg", "images/15.png.jpg", "images/16.png.jpg",
+      "images/ant.svg", "images/bedbug.svg", "images/cockroach.svg", "images/flea.svg", "images/fly.svg", "images/mosquito.svg", "images/pantry.svg",
+      "images/rodent.svg", "images/silverfish.svg", "images/termite.svg", "images/client1.svg", "images/client2.svg", "images/client3.svg"
+    ];
+
+    const captions = [
+      'طرق الرش — بدون رائحة وبدون الحاجة لمغادرة المنزل',
+      'فريقنا المهني — إجراءات آمنة وفعّالة',
+      'تعقيم احترافي — سريع وبدون رائحة',
+      'خطة متابعة دورية ومراقبة نتائج فعّالة',
+      'خدمة ميدانية سريعة وموثوقة'
+    ];
+
+    // helper to open the shared lightbox
+    function openLightbox(src) {
+      const lightbox = document.getElementById('lightbox'); const lightboxImg = lightbox ? lightbox.querySelector('img') : null;
+      if (lightbox && lightboxImg) { lightboxImg.src = src; lightbox.classList.add('show'); lightbox.setAttribute('aria-hidden', 'false'); }
+    }
+
+    files.forEach((f, idx) => {
+      const div = document.createElement('div'); div.className = 'gallery-item';
+      // alternate a larger tile for visual variety
+      if (idx % 5 === 0) div.classList.add('size-large');
+
+      const img = document.createElement('img'); img.src = f; img.loading = 'lazy'; img.alt = 'معرض'; img.style.cursor = 'pointer';
+      // if image fails to load, remove the item to avoid empty placeholders
+      img.onerror = () => { div.remove(); };
+      img.addEventListener('click', () => openLightbox(f));
+
+      div.appendChild(img);
+      const cap = document.createElement('p'); cap.className = 'gallery-caption'; cap.innerText = captions[idx % captions.length];
+      div.appendChild(cap);
+      galleryGrid.appendChild(div);
+    });
+  }
+
+  // Videos grid (separate section)
+  const videoGrid = document.getElementById('articles-video-grid');
+  if (videoGrid) {
+    // mix of YouTube embeds and local files (local files are optional)
+    const vids = [
+      { type: 'youtube', src: 'https://www.youtube.com/embed/aqz-KE-bpKQ', title: 'عرض توضيحي: طرق المكافحة' },
+      { type: 'local', src: 'videos/sample.mp4', title: 'فيديو محلي: شرح الخدمة (إن وجد)' }
+    ];
+
+    vids.forEach((v, idx) => {
+      const it = document.createElement('div'); it.className = 'video-item'; it.tabIndex = 0; it.dataset.type = v.type; it.dataset.src = v.src;
+      const thumbWrap = document.createElement('div'); thumbWrap.className = 'thumb';
+      const timg = document.createElement('img'); timg.src = (idx === 0) ? 'images/about-team.svg' : 'images/service-spray.svg'; timg.alt = 'صورة مصغرة للفيديو'; timg.loading = 'lazy'; timg.className = 'video-thumb';
+      thumbWrap.appendChild(timg);
+      const play = document.createElement('div'); play.className = 'play-overlay'; play.innerText = '▶';
+      thumbWrap.appendChild(play);
+      const label = document.createElement('p'); label.innerText = v.title;
+      it.appendChild(thumbWrap); it.appendChild(label);
+
+      it.addEventListener('click', () => {
+        const videoModal = document.getElementById('video-modal'); const videoWrap = videoModal ? videoModal.querySelector('.video-wrap') : null;
+        if (videoModal && videoWrap) {
+          videoWrap.innerHTML = '';
+          if (v.type === 'youtube') {
+            const iframe = document.createElement('iframe'); iframe.src = v.src; iframe.width = '900'; iframe.height = '506'; iframe.setAttribute('allow', 'autoplay; encrypted-media; picture-in-picture'); iframe.setAttribute('allowfullscreen', ''); videoWrap.appendChild(iframe);
+          } else {
+            // check whether the local resource exists before embedding
+            fetch(v.src, { method: 'HEAD' }).then(res => {
+              if (res.ok) {
+                const vv = document.createElement('video'); vv.src = v.src; vv.controls = true; vv.autoplay = true; vv.style.maxWidth = '90vw'; videoWrap.appendChild(vv);
+              } else {
+                videoWrap.innerHTML = '<p style="padding:20px; text-align:center">الفيديو المحلي غير متوفر حالياً — شاهد العرض التعريفي بدلاً من ذلك.</p>';
+                const iframe = document.createElement('iframe'); iframe.src = 'https://www.youtube.com/embed/aqz-KE-bpKQ'; iframe.width = '900'; iframe.height = '506'; iframe.setAttribute('allow', 'autoplay; encrypted-media; picture-in-picture'); iframe.setAttribute('allowfullscreen', ''); videoWrap.appendChild(iframe);
+              }
+            }).catch(() => {
+              videoWrap.innerHTML = '<p style="padding:20px; text-align:center">تعذر تحميل الفيديو المحلي — الرجاء المحاولة لاحقًا.</p>';
+            });
+          }
+          videoModal.classList.add('show'); videoModal.setAttribute('aria-hidden', 'false');
+        }
+      });
+
+      // center the first/highlighted video
+      if (idx === 0) it.classList.add('centered-video');
+      videoGrid.appendChild(it);
+    });
+
+    // video modal close handler (for items we create)
+    const videoModal = document.getElementById('video-modal'); if (videoModal) {
+      const closeBtn = videoModal.querySelector('.video-close'); closeBtn && closeBtn.addEventListener('click', () => { videoModal.classList.remove('show'); videoModal.setAttribute('aria-hidden', 'true'); videoModal.querySelector('.video-wrap').innerHTML = ''; });
+      videoModal.addEventListener('click', (e) => { if (e.target === videoModal) { videoModal.classList.remove('show'); videoModal.setAttribute('aria-hidden', 'true'); videoModal.querySelector('.video-wrap').innerHTML = ''; } });
+      document.addEventListener('keydown', (e) => { if (e.key === 'Escape') { videoModal.classList.remove('show'); videoModal.setAttribute('aria-hidden', 'true'); videoModal.querySelector('.video-wrap').innerHTML = ''; } });
+    }
+  }
+
+  // Per-article pages: transform .article-content into alternating rows (defensive)
+  const articleContent = document.querySelector('.article-content');
+  if (articleContent) {
+    (function(){
+      const originalHTML = articleContent.innerHTML;
+      try {
+        const fileMap = {
+          'الصراصير': '../images/cockroach.svg', 'بق الفراش': '../images/bedbug.svg', 'القوارض (فئران وجرذان)': '../images/rodent.svg', 'النمل': '../images/ant.svg',
+          'النمل الأبيض (Termites)': '../images/termite.svg', 'البعوض': '../images/mosquito.svg', 'الذباب': '../images/fly.svg', 'البراغيث': '../images/flea.svg',
+          'حشرات المخزون وجوّاف الحبوب (عث المخزن، سوس الطعام)': '../images/pantry.svg', 'الحشرة الفضية (Silverfish)': '../images/silverfish.svg'
+        };
+        const fallback = (f) => '../images/img1.svg';
+
+        // collect H2 sections
+        const nodes = Array.from(articleContent.children);
+        const grouped = [];
+        let current = null;
+        nodes.forEach(n => {
+          if (n.tagName === 'H2') {
+            current = { heading: n, nodes: [] }; grouped.push(current);
+          } else if (current) { current.nodes.push(n); }
+        });
+
+        if (!grouped.length) return; // nothing to transform
+
+        const frag = document.createDocumentFragment();
+        grouped.forEach((g, i) => {
+          const row = document.createElement('div'); row.className = 'article-row'; if (i % 2) row.classList.add('reverse');
+          const imgWrap = document.createElement('div'); imgWrap.className = 'article-media';
+          const img = document.createElement('img');
+          const imgSrc = fileMap[g.heading.innerText] || fallback(g.heading.innerText);
+          img.src = imgSrc; img.loading = 'lazy'; img.alt = g.heading.innerText;
+          // fallback to placeholder SVG if image fails to load
+          img.onerror = () => { img.src = 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="320" height="200"><rect width="100%" height="100%" fill="%23f3f3f3"/><text x="50%" y="50%" font-size="14" text-anchor="middle" fill="%23777" dy=".3em">صورة غير متوفرة</text></svg>'; };
+          imgWrap.appendChild(img);
+
+          const text = document.createElement('div'); text.className = 'article-text';
+          // clone heading to keep original DOM intact if necessary
+          text.appendChild(g.heading.cloneNode(true));
+          g.nodes.forEach(n => text.appendChild(n.cloneNode(true)));
+
+          row.appendChild(imgWrap); row.appendChild(text);
+          frag.appendChild(row);
+        });
+
+        // commit the fragment only after successful build
+        articleContent.innerHTML = '';
+        articleContent.appendChild(frag);
+      } catch (err) {
+        console.error('Article transform failed, restoring original content', err);
+        articleContent.innerHTML = originalHTML; // restore original content so text remains visible
+      }
+    })();
+  }
+
+});
+
+</script>
+
+<div id="article-ants" class="inlined-article" class="hidden"><article class="article-content">
+      <h2>مقدمة موسعة</h2>
+      <p>النمل يمثل مجموعة واسعة من الأنواع التي تتباين في سلوكها وتأثيرها؛ فبينما يكتفي بعضها بكونه مزعجًا عند دخول المطابخ والمخازن، هناك أنواع أكثر خطورة مثل النمل الأبيض الذي يهاجم الأخشاب. فهم نوع النمل وسلوكه ضروري لاختيار الاستراتيجية الملائمة للمكافحة.</p>
+
+      <h2>أسباب الانتشار والعوامل المحفزة</h2>
+      <p>تجذب مصادر الطعام المكشوفة مثل السكر، الفواكه، بقايا الطعام، بالإضافة إلى تسربات المياه التي توفر الرطوبة المطلوبة للبعض. الشقوق حول النوافذ والأبواب، وفجوات في الجدران تسمح بدخول النمل بسهولة. في المباني التجارية، سوء إدارة المخزون وعدم إحكام تغليف المواد الغذائية يسهل دخول النمل وتأسيس ممرات للمستعمرات.</p>
+
+      <h2>الآثار والمخاطر</h2>
+      <p>يؤدي تواجد النمل في أماكن إعداد الطعام إلى تلوث المواد وسوء خدمة العملاء، بينما النمل الأبيض يلحق أضرارًا هيكلية قد تتطلب صيانة باهظة. النمل قد يكون ناقلاً للمخلوقات الدقيقة الملوثة ويؤثر على سمعة الأنشطة التجارية.</p>
+
+      <h2>استراتيجية المكافحة</h2>
+      <p>تشمل طريقتنا:</p>
+      <ul>
+        <li><strong>التشخيص النوعي:</strong> تحديد نوع النمل وسلوك التغذية لتوجيه نوع الطعوم والعلاج.</li>
+        <li><strong>الطعوم الموجهة:</strong> استخدام طعوم جيل أو سائل يتم نقله داخل المستعمرة للوصول إلى الملكة والقضاء على العمود الفقري للمستعمرة.</li>
+        <li><strong>الإجراءات الوقائية:</strong> سد الشقوق، تحسين نظم التخزين، تنظيف دورى ومسح المناطق الحساسة لمنع إعادة الاستيطان.</li>
+        <li><strong>التدخل في النمل الأبيض:</strong> يتطلب فحصًا هيكليًا وتطبيق حواجز أرضية أو مصائد متخصصة من قِبل فريق مدرّب.</li>
+      </ul>
+
+      <h2>نصائح سريعة للملاك</h2>
+      <p>احفظ الأطعمة في عبوات مغلقة، أصلح التسريبات بسرعة، واحرص على تنظيف المناطق التي تتجمع فيها النفايات. للتهيؤ طويل الأمد، راجع أدلة الصيانة الوقائية وتواصل مع فريقنا لوضع خطة مخصصة لموقعك.</p>
+
+      <p>لحجز زيارة فنية أو استشارة اتصل بنا على <a href="https://wa.me/96550255870">+965 50255870</a>.</p>
+    </article></div>
+<div id="article-bedbugs" class="inlined-article" class="hidden"><article class="article-content">
+      <h2>مقدّمة مفصّلة</h2>
+      <p>بق الفراش (Bed bugs) مشكلة متزايدة في البيئات الحضرية نتيجة السفر، تداول الأثاث المستعمل، والتراخي في بعض ممارسات النظافة. هذه الحشرات تختبئ في أماكن ضيقة للغاية (خياطة المراتب، إطارات الأسرة، خلف اللوحات الكهربائية) وتخرج ليلاً لتتغذى على الدم، مما يسبب اضطرابًا في النوم، خسائر مادية نتيجة تغيير المفروشات، ومضاعفات جلدية لدى المصابين بحساسية.</p>
+
+      <h2>دورة الحياة ولماذا يصعب القضاء عليها</h2>
+      <p>تضع أنثى بق الفراش عشرات البيضات الصغيرة التي تكون مقاومة إلى حد بعيد للعلاجات السطحية، وتتكيف اليرقات مع درجات الحرارة المختلفة. لذلك فإن المعالجة الفعالة تدمج عدة تقنيات: المعالجة الحرارية لقتل البيض، المعالجات الكيميائية المستهدفة للمخابئ، وإجراءات بيئية لمنع عودة المستعمرة.</p>
+
+      <h2>أسباب الانتشار ومصادر الخطر</h2>
+      <p>ينتشر بق الفراش عبر الأمتعة، المفروشات المستعملة، والانتقال بين الشقق عبر الشقوق والممرات. التأخر في الكشف، تأجيل الغسيل أو التنظيف بعد السفر، وشراء الأثاث المستعمل بدون فحص يزيد من فرص الانتشار بسرعة. المباني متعددة الوحدات تحتاج تنسيق فني بين الجيران لمنع الانتقال من شقة إلى أخرى.</p>
+
+      <h2>نظام مكافحتي المتكامل لبق الفراش (خطوة بخطوة)</h2>
+      <ol>
+        <li><strong>الفحص والتشخيص:</strong> فنيونا يفحصون الفراش، الشقوق، الأرائك، الستائر، والمفروشات لتحديد تصور شامل لمكان الانتشار.</li>
+        <li><strong>التجهيز قبل المعالجة:</strong> تعليمات لغسل الملابس وكيها، إخراج الألعاب والملابس الحساسة في أكياس مغلقة مؤقتاً، وإفراغ المساحات للوصول للمخابئ.</li>
+        <li><strong>العلاج الحراري:</strong> رفع درجة حرارة الغرفة أحيانًا إلى حدود تقلل فرص بقاء البيض، وهذه الطريقة فعالة ضد جميع الأطوار الحية.</li>
+        <li><strong>رش موضعي ومتابعة:</strong> استخدام مبيدات متوافقة مع المواصفات المهنية ورشٍ موضعي في الشقوق مع إعادة تقييم بعد 7-14 يومًا.</li>
+        <li><strong>الوقاية الطويلة:</strong> تغطية المراتب بأغطية مضادة للحشرات، إحكام إغلاق الشقوق، ومتابعة دورية لضمان عدم عودة الإصابة.</li>
+      </ol>
+
+      <h2>نصائح للعافية بعد المعالجة</h2>
+      <p>بعد المعالجة يُنصح بغسل جميع الأقمشة والملابس على درجة حرارة عالية إن أمكن، والامتناع عن إعادة إدخال الأثاث المستعمل دون فحص. نوصي بوضع فخاخ مراقبة مؤقتة لفترة للتأكد من عدم وجود بقايا نشاط.</p>
+
+      <h2>فيديو توضيحي</h2>
+      <div class="text-center-margin">
+        <iframe width="720" height="405" src="https://www.youtube.com/embed/aqz-KE-bpKQ" title="فيديو توضيحي عن مكافحة بق الفراش" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <noscript>
+          <p>إذا لم يعمل الفيديو، يمكنك مشاهدته مباشرةً على <a href="https://www.youtube.com/watch?v=aqz-KE-bpKQ" target="_blank" rel="noopener">YouTube</a>.</p>
+        </noscript>
+      </div>
+
+      <h2>أسئلة شائعة قصيرة</h2>
+      <p><strong>هل يختفي بق الفراش من المرة الأولى؟</strong> في بعض الحالات قد تحتاج عدة جلسات ومتابعة لأن البيض قد يحتاج لعمليات متعددة لإزالته تمامًا.</p>
+      <p><strong>هل المعالجة آمنة للأطفال والحيوانات الأليفة؟</strong> نستخدم منتجات مهنية مع تعليمات أمان؛ عادة تتضمن المعالجة إخلاء مؤقت للمكان واتباع إرشادات ما بعد العلاج لسلامة الجميع.</p>
+
+      <p>لموعد تقييم أو إرشاد متخصص تواصل معنا على <a href="https://wa.me/96550255870">واتساب +965 50255870</a> أو عبر نموذج الاتصال، وسنقدّم خطة علاجية مخصصة تضمن القضاء والمتابعة.</p>
+    </article></div>
+<div id="article-cockroaches" class="inlined-article" class="hidden"><article class="article-content">
+      <h2>مقدمة مُعمّقة</h2>
+      <p>الصراصير ليست مجرد منظر مزعج—إنها كائنات مرنة للغاية قادرة على البقاء في بيئات شديدة التحمل. تتميز بسرعة التكاثر ووجودها في أماكن عميقة يصعب الوصول إليها (شقوق الجدار، خلف الأجهزة، فتحات التصريف). لذلك، السيطرة الحقيقية تتطلب مزيجًا من التعرف الدقيق على السلوك، إجراءات بيئية جيدة، وتدخلات فنية مهنية.</p>
+
+      <h2>دورة الحياة ولماذا تحتاج لحل متكامل</h2>
+      <p>تمر الصراصير بمراحل بيضة → يرقات → بالغة؛ البيض محمي ويصعب الوصول إليه عبر رذاذ سطحي فقط. القليل من الأنواع يمكن أن تتكاثر بسرعة مما يؤدي لانتشار سريع إذا لم تُستهدف المستعمرات المركزية. لهذا نستخدم طرقًا تجمع بين الطعوم الجاذبة التي تُنقل داخل المستعمرة، والمعالجات الموضعية في المخابئ، مع إجراءات تغيير البيئة المحيطة لمنع تبديل الموائل.</p>
+
+      <h2>أسباب الانتشار — تفاصيل عملية</h2>
+      <p>السبب الرئيسي هو توفر الغذاء والماء. أخطاء شائعة تزيد الانتشار: تدوين حاويات الطعام دون إغلاق، ترك حنفيات صغيرة أو تسريبات، ترك فتات الطعام في أسفل الأثاث، وتجمّع القمامة في أماكن مكشوفة. معدات ومستوردات مستعملة يمكن أن تدخل الحشرات إلى أي منزل بسهولة. في المباني المشتركة، تؤدي الفتحات والشقوق والإمداد المشترك لأنظمة التهوية والصرف إلى انتقال الحالات بين الوحدات.</p>
+
+      <h2>المخاطر الصحية</h2>
+      <p>الصراصير تنقل بكتيريا ممرِضة وتسبّب تلوثًا غذائيًا في المطابخ والمستودعات. كما قد تحفز الحساسية والربو لدى الأطفال والحسّاسين. المؤسسات الغذائية التي لا تتحكم بآفاتها قد تواجه غرامات أو إغلاقًا مؤقتًا من قبل الجهات الرقابية.</p>
+
+      <h2>العلاج العملي خطوة بخطوة</h2>
+      <ol>
+        <li><strong>التقييم المهني:</strong> فحص شامل لتحديد المستعمرات، نقاط الدخول، ومسارات الحركة باستخدام مصائد وملاحظات现场.</li>
+        <li><strong>التدخل البيئي:</strong> تجهيزات تنظيف عميق، غلق الكونتينرات، إصلاح التسريبات، وإزالة مصادر الغذاء المكشوفة.</li>
+        <li><strong>التدخل الكيميائي الذكي:</strong> استعمال طعوم جل ومواد بطيئة المفعول موضوعة داخل مخابئ محددة ولا تُعرض السطح العام للتلوث.</li>
+        <li><strong>اختيارات بديلة:</strong> استخدام مصائد لاصقة للمراقبة، وبعض الحالات قد تستفيد من خدمات تبريد/تدفئة محلِّية أو معالجة حرارية مركزة في أماكن التجمع الكبيرة.</li>
+        <li><strong>متابعة ومراقبة:</strong> جدولة زيارات مراجعة بعد 7 و30 يومًا للتأكد من انحسار النشاط واستبدال الطعوم إن لزم.</li>
+      </ol>
+
+      <h2>نصائح وقائية مفصّلة</h2>
+      <p>احفظ الحبوب والمواد الجافة في عبوات محكمة، اغسل الصحون فورًا، احرص على عدم ترك بقايا الأطعمة في قيعان الخزائن، وضع سلات النفايات بمكان مغطى وتفريغها يوميًا. افحص الأجهزة المستعملة قبل إدخالها للمنزل، واصنع خطة صيانة لسد الشقوق الصغيرة حول أنابيب الماء والكهرباء.</p>
+
+      <h2>فيديو توضيحي وشرح سريع</h2>
+      <div class="text-center-margin">
+        <iframe width="720" height="405" src="https://www.youtube.com/embed/aqz-KE-bpKQ" title="فيديو توضيحي عن مكافحة الصراصير" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+
+      <p>في حال وجود نشاط عالي أو ظهور علامات مقاومة (صعوبة في السيطرة بعد عدة محاولات)، من الأفضل استدعاء فريق مختص لإجراء تقييم ميداني ووضع برنامج علاج مخصص بأدوات احترافية وآمنة لكل بيئة. للتواصل السريع راسلنا على واتساب <a href="https://wa.me/96550255870">+965 50255870</a>.</p>
+    </article></div>
+<div id="article-fleas" class="inlined-article" class="hidden"><article class="article-content">
+      <h2>مقدمة</h2>
+      <p>البراغيث طفيليات صغيرة جداً لكنها تسبب إزعاجًا كبيرًا عند تواجدها داخل المنازل، خصوصًا عندما تكون مرتبطة بالحيوانات الأليفة. يمكن أن تسبب لدغات مزعجة ومشاكل جلدية، وقد تنتقل بسرعة عندما لا تُعالج مصادرها الأساسية.</p>
+
+      <h2>أسباب الانتشار</h2>
+      <p>السبب الأكثر شيوعًا لانتشار البراغيث هو وجود حيوان أليف مصاب غير معالج، إضافة إلى السجاد والأثاث الذي يوفر مخابئ للبيض واليرقات. عدم غسل فراش الحيوانات والبطانيات بشكل دوري، ووجود مناطق خارجية ذات عشب طويل أو مخلفات حيوانية يزيد من خطر إعادة العدوى.</p>
+
+      <h2>طرق المكافحة المتكاملة</h2>
+      <p>نطبق مزيجًا من الخطوات الفعّالة:</p>
+      <ul>
+        <li><strong>علاج الحيوانات الأليفة:</strong> استخدام منتجات طبية موثوقة تحت إشراف الطبيب البيطري لقتل البالغات ومنع تكاثر البيوض.</li>
+        <li><strong>تنظيف المنزل بعمق:</strong> كنس وسحب السجاد بانتظام، غسل أغطية الحيوانات والفرش بخلطات ماء ساخن، واستخدام مجففات بدرجة حرارة عالية للتأكد من القضاء على البيض واليرقات.</li>
+        <li><strong>معالجات بيئية محددة:</strong> تطبيق مبيدات مخصصة لليرقات والبيض في مناطق نوم الحيوانات وتحت الأثاث، مع التعامل المهني للسجاد والمراتب في الحالات الشديدة.</li>
+        <li><strong>المتابعة الوقائية:</strong> جدولة علاجات منتظمة للحيوانات وفحص المناطق الخارجية لمنع تكرار الإصابة.</li>
+      </ul>
+
+      <h2>نصائح سريعة للوقاية</h2>
+      <p>اغسل فراش الحيوانات وأغطية الأسرة بصورة منتظمة، قم بفحص الحيوانات دورياً، والحفاظ على حدائق خارجية مرتبة خالية من مخلفات الحيوانات. في حالات الشك، تواصل مبكرًا لتجنّب تفاقم المشكلة.</p>
+
+      <p>لحجز تقييم ميداني أو الحصول على خطة علاجية متكاملة، راسلنا عبر واتساب <a href="https://wa.me/96550255870">+965 50255870</a> وسنُقدّم خدمة احترافية مع متابعة دورية.</p>
+    </article></div>
+<div id="article-flies" class="inlined-article" class="hidden"><article class="article-content">
+      <h2>مقدمة</h2>
+      <p>الذباب يمثل خطراً صحيًا في أماكن التعامل مع الأغذية والنفايات، إذ ينقل البكتيريا والملوثات من مصادر ملوثة إلى أسطح تحضير الطعام. إدارة الذباب تعتمد بشكل أساسي على إجراءات صارمة في إدارة النفايات والوقاية المادية داخل المنشآت.</p>
+
+      <h2>أسباب الانتشار والبيئات المؤهلة</h2>
+      <p>المصادر الرئيسية هي حاويات النفايات المكشوفة، مخازن المواد العضوية، مصارف الصرف غير النظيفة، والأماكن التي تتراكم فيها المخلفات. الأماكن التجارية مثل المطاعم والأسواق تتأثر بسرعة عندما لا تكون لديها نظم فعّالة للتخلص من النفايات.</p>
+
+      <h2>استراتيجية المكافحة والتقنيات المستخدمة</h2>
+      <p>نهجنا يشمل:</p>
+      <ul>
+        <li><strong>التحكم في المصدر:</strong> إغلاق الحاويات، جمع النفايات بشكل منتظم، وتنظيف المساحات حول المخازن.</li>
+        <li><strong>حواجز وقائية:</strong> تركيب شاشات، ألواح مانعة للتسريب، وأبواب محكمة لتقليل دخول الذباب إلى أماكن التحضير.</li>
+        <li><strong>مصائد ضوئية ومصائد لاصقة:</strong> استخدام مصائد آمنة في المواقع الحساسة لتقليل عدد البالغين.</li>
+        <li><strong>التدخل الكيميائي المحدود:</strong> رش موضعي وعلاجات موجهة في نقاط التجمع عند الضرورة وتحت إشراف فنيين، مع مراعاة معايير الصحة والسلامة.</li>
+      </ul>
+
+      <h2>نصائح عملية</h2>
+      <p>احرص على إغلاق الحاويات، تنظيف المصارف والأماكن الرطبة، واستخدام تغطية للمواد العضوية. للمنشآت الغذائية، الالتزام بخطط تشغيلية ونظم إدارة النفايات يقلل من فرص التفشي.</p>
+
+      <p>لحجز تقييم موقعي أو خطة إدارة ذباب مخصصة اتصل عبر واتساب <a href="https://wa.me/96550255870">+965 50255870</a>.</p>
+    </article></div>
+<div id="article-mosquitoes" class="inlined-article" class="hidden"><article class="article-content">
+      <h2>مقدمة مختصرة</h2>
+      <p>البعوض من الآفات التي تمثل إزعاجًا صحيًا وبيئيًا، إذ يمكن لبعض الأنواع نقل أمراضًا خطيرة. السيطرة على البعوض تتطلب تعاملًا من مصدر التكاثر (المياه الراكدة) إلى التدخّلات الميدانية المدروسة التي تقلل الأعداد وتقي المجتمع.</p>
+
+      <h2>أسباب الانتشار بتفصيل</h2>
+      <p>تتأثر أعداد البعوض بوجود المياه الراكدة في أوعية الزرع، برك الصرف، أحواض السباحة غير المعالجة، وحتى العلب والأوعية الصغيرة المتروكة. أنظمة الري غير المنتظمة والمسطحات المائية القريبة من المساكن تزيد من توافر مواقع وضع البيض، بينما يسهل المناخ الدافئ تسريع دورات التكاثر.</p>
+
+      <h2>طرق المكافحة المتاحة</h2>
+      <p>نطبق في المركز نهجًا متعدد الطبقات:</p>
+      <ul>
+        <li><strong>التحكم في المصدر:</strong> تفريغ وتغطية أو التخلص من أوعية المياه الراكدة وإدارة صيانة البرك وأحواض الزرع.</li>
+        <li><strong>معالجات ليرقية:</strong> استخدام منتجات بيو-لوجية آمنة لقتل اليرقات في مصادر التكاثر دون تأثير بيئي كبير.</li>
+        <li><strong>الوقاية المنزلية:</strong> تركيب شاشات، سد الفتحات حول النوافذ، واستخدام مبيدات موضعية عند الحاجة.</li>
+        <li><strong>العمليات الميدانية:</strong> رش استراتيجي في المناطق العامة عند التفشِّي للحد من البالغين المتطايرين وتقليل الإزعاج على السكان.</li>
+      </ul>
+
+      <h2>نصائح وقائية عامة</h2>
+      <p>تابع تنظيف حاويات المياه والأحواض، حافظ على صيانة شبكات الصرف، وعدّل تصريف المياه حول منزلك. لسكان المناطق الحضرية، يمكن ترتيب حملات مجتمعية مع الجهات المختصة للحد من أماكن التكاثر في المناطق العامة.
+</p>
+
+      <p>لمشروعات وقائية أو خدمات ميدانية لإدارة البعوض تواصل معنا عبر <a href="https://wa.me/96550255870">+965 50255870</a> وسنقدّم خطة مناسبة لموقعك تضم تقييماً ومتابعة دورية.</p>
+    </article></div>
+<div id="article-rodents" class="inlined-article" class="hidden"><article class="article-content">
+      <h2>مقدمة وتوضيح</h2>
+      <p>القوارض مثل الفئران والجرذان لا تُعد مجرد إزعاج؛ بل هي مصدر حقيقي للأمراض والتلف المادي. تتكاثر بسرعة وتبحث عن مصادر الغذاء والمأوى، ما يجعلها خطراً على المنازل، المستودعات، والمطاعم. التحكم الفعّال يتطلب مزيجاً من العزل البيئي، المصائد المدروسة، واستخدام طعوم آمنة ومروّضة بشكل مهني.</p>
+
+      <h2>أسباب الانتشار والعوامل المساعدة</h2>
+      <p>وجود نفايات مفتوحة، تخزين سيئ للمواد الغذائية، وجود مخابئ كالأكوام الخردة، والشقوق في المباني كلها عوامل تساعد على جذب القوارض. القوارض تَستغل بسهولة الشقوق الصغيرة حول الأنابيب والمداخل، كما يمكن أن تنتقل من الخارج إلى الداخل عبر الحدائق غير المرتبة أو المنافذ غير المحكمة.</p>
+
+      <h2>الأضرار الصحية والاقتصادية</h2>
+      <p>القوارض ناقلة لجراثيم مثل الليبتوسبيرا والسالمونيلا، ويمكن أن تتسبب في تلوث المواد الغذائية وأسطح التحضير، ما يؤدي إلى مخاطر صحية وخسائر مادية. كما تسبب أضراراً بالأجهزة الكهربائية والأسلاك مما قد يؤدي إلى حرائق أو أعطال مكلفة.</p>
+
+      <h2>نهج المكافحة لدينا</h2>
+      <p>يرتكز أسلوبنا على عدة مراحل:</p>
+      <ul>
+        <li><strong>تفقد وتقييم:</strong> فحص شامل لتحديد مداخل القوارض ومسارات حركتها وتركيزاتها داخل الموقع.</li>
+        <li><strong>إغلاق المداخل:</strong> سد الشقوق والفواصل، تركيب شاشات للحماية، وإحكام غلق مخازن الطعام بشكل يمنع الوصول.</li>
+        <li><strong>مصائد مهنية وطرائق آمنة:</strong> تركيب المصائد الميكانيكية أو استخدام الطعوم المراقبة بشكل يضمن أمان الأطفال والحيوانات الأليفة.</li>
+        <li><strong>التوعية والإدارة:</strong> تدريب العاملين في المطاعم والمخازن على طرق التخزين الصحيحة وإدارة المخلفات لتقليل الموارد المتاحة للقوارض.</li>
+        <li><strong>متابعة دورية وبرنامج صيانة:</strong> زيارات تفقدية لضمان استمرار السيطرة ومنع الانتكاس.</li>
+      </ul>
+
+      <h2>خطط للوقاية طويلة المدى</h2>
+      <p>تطبيق سياسات نظافة صارمة، تحسين هندسة التخزين، وإدارة النفايات بشكل يومي، بالإضافة إلى تهيئة بيئة خارجية نظيفة حول الممتلكات تقلل بشكل جذري من مخاطر تفشي القوارض.</p>
+
+      <p>لخدمات الطوارئ أو تقييم موقع شامل اتصل بنا عبر واتساب <a href="https://wa.me/96550255870">+965 50255870</a>، وسنرتب زيارة ميدانية وتقريراً عملياً يتضمن خطة علاجية ومتابعة دورية.</p>
+    </article></div>
+<div id="article-termites" class="inlined-article" class="hidden"><article class="article-content">
+      <h2>مقدمة وأهمية التدخل المبكر</h2>
+      <p>النمل الأبيض آفة بنيوية يمكن أن تُحدث أضرارًا كبيرة وغير ظاهرة للوهلة الأولى داخل الهياكل الخشبية والأساسات. اكتشاف الإصابة مبكرًا يقلل بشكل كبير من تكاليف الإصلاح ويقي المبنى من الضرر المتصاعد الذي قد يستلزم استبدال أجزاء هيكلية.</p>
+
+      <h2>أسباب الانتشار وظروف التكاثر</h2>
+      <p>يفضل النمل الأبيض التربة الرطبة والخشب المتعفّن أو الملامس للتربة. تسربات المياه، أنظمة الصرف المعطلة، والأخشاب المخزنة بالقرب من أساسات المبنى تخلق بيئة ملائمة. تنتقل المستعمرات عبر الاتصال المباشر بين المصادر الخشبية أو من خلال الأخشاب المستخدمة في البناء والإصلاح.</p>
+
+      <h2>الآثار الاقتصادية والهيكلية</h2>
+      <p>إهمال علاج النمل الأبيض يؤدي إلى إضعاف العوارض والأخشاب الحاملة للأساسات، مما يعرض المبنى لمشكلات هيكلية تتطلب إصلاحات مكلفة. كما يقلل من قيمة العقار ويضع عبئًا ماليًا كبيرًا على الملاك والمؤسسات.</p>
+
+      <h2>خطة معالجة متقدمة</h2>
+      <p>تبدأ خطة المركز بتقييم تفصيلي لتحديد امتداد المستعمرة ومصادر الرطوبة ثم نطبّق:</p>
+      <ul>
+        <li><strong>حواجز كيميائية:</strong> تطبيق مواد خاصة حول الأساسات تمنع اختراق الممالك النملية إلى الهياكل.</li>
+        <li><strong>مصائد ومراقبة:</strong> تركيب مصائد لمراقبة النشاط وتحديد موقع المستعمرات الحقيقية.</li>
+        <li><strong>معالجة الأخشاب:</strong> علاج أو استبدال الأخشاب المتضررة مستخدمين مواد مقاومة للنمل الأبيض.</li>
+        <li><strong>إدارة مصدر الرطوبة:</strong> إصلاح التسريبات وتحسين الصرف حول المبنى لمنع بيئات التكاثر.</li>
+      </ul>
+
+      <h2>نصائح للوقاية</h2>
+      <p>ابتعد عن تخزين الأخشاب مباشرة على الأرض، أصلح تسريبات المياه فوراً، وأجرِ فحوصات دورية خاصةً للمنازل القديمة أو المباني القريبة من النباتات والأشجار. تواصل معنا لفحص مجاني مبدئي إذا اشتبهت بوجود علامات تلف أو نشاط نمل أبيض.</p>
+
+      <p>للحصول على تقييم ميداني وخطة علاج متكاملة اتصل عبر واتساب <a href="https://wa.me/96550255870">+965 50255870</a> وسنقوم بزيارة وتقرير فني شامل.</p>
+    </article></div>
+<script>
+(function(){
+  // Enhanced in-page article opener: if an inlined fragment exists (id=article-<name>) use it instead of fetching
+  document.addEventListener('click', function(e){
+    try{
+      const btn = (e.target && e.target.closest) ? e.target.closest('.read-more') : null;
+      if(!btn) return;
+      e.preventDefault();
+      const src = btn.getAttribute('data-src') || btn.getAttribute('href') || (btn.dataset && btn.dataset.src) || '';
+      const m = src.match(/articles\/([^/.]+)\.html/);
+      if(m){
+        const id = 'article-' + m[1];
+        const inlined = document.getElementById(id);
+        if(inlined){
+          const parent = btn.closest('.pest-section') || btn.closest('.card') || document.body;
+          let body = parent.querySelector('.pest-body');
+          if(!body){
+            body = document.createElement('div');
+            body.className = 'pest-body expanded';
+            parent.appendChild(body);
+          }
+          body.classList.add('expanded');
+          body.setAttribute('aria-hidden','false');
+          // Use the inner content of the inlined fragment (strip outer wrapper if present)
+          const articleNode = inlined.querySelector('.article-content') || inlined.querySelector('.pest-content') || inlined.querySelector('.method-list') || inlined;
+          body.innerHTML = articleNode ? articleNode.innerHTML : inlined.innerHTML;
+          // Move any media inside to visible state
+          body.querySelectorAll('img, video').forEach(el=>el.style.maxWidth='100%');
+          return;
+        }
+      }
+    }catch(err){console.warn('inlined opener failed', err);}
+    // If no inlined fragment, allow existing fetch-based handler in the page to proceed
+  }, true);
+})();</script>
+<script>(function(){
+  // Extra fallback opener for inlined articles (handles href="#article-..." or data-src)
+  document.addEventListener('click', function(e){
+    try{
+      const btn = e.target && e.target.closest ? e.target.closest('.read-more') : null;
+      if(!btn) return;
+      const parent = btn.closest('.pest-section') || btn.closest('.card') || document.body;
+      const href = btn.getAttribute('href') || btn.getAttribute('data-src') || (btn.dataset && btn.dataset.src) || '';
+      let id = null;
+      if(href && href.indexOf('#article-')===0) id = href.slice(1);
+      else{
+        const m = (href||'').match(/articles/([^/.]+).html/);
+        if(m) id = 'article-' + m[1];
+      }
+      if(id){
+        const inlined = document.getElementById(id);
+        if(inlined){
+          e.preventDefault();
+          let body = parent.querySelector('.pest-body');
+          if(!body){ body = document.createElement('div'); body.className='pest-body expanded'; parent.appendChild(body); }
+          body.classList.add('expanded'); body.setAttribute('aria-hidden','false');
+          const articleNode = inlined.querySelector('.article-content') || inlined.querySelector('.pest-content') || inlined.querySelector('.method-list') || inlined;
+          body.innerHTML = articleNode ? articleNode.innerHTML : inlined.innerHTML;
+          body.querySelectorAll('img, video, iframe').forEach(el=>{ el.style.maxWidth='100%'; el.removeAttribute('width'); el.removeAttribute('height'); });
+        }
+      }
+    }catch(err){console.warn('extra opener failed', err)}
+  }, true);
+})();</script>
+<script>/* lazy loader helper */(function(){
+    function lazyLoader(){
+      if('IntersectionObserver' in window){
+        const io = new IntersectionObserver(function(entries){
+          entries.forEach(function(entry){ if(entry.isIntersecting){ const el = entry.target; const src = el.getAttribute('data-src'); if(src){ if(el.tagName==='IMG'){ el.src = src; el.removeAttribute('data-src'); el.classList.remove('lazy'); } else if(el.tagName==='VIDEO'){ if(!el.getAttribute('src')) el.setAttribute('src',src); el.removeAttribute('data-src'); } else if(el.tagName==='IFRAME'){ if(!el.getAttribute('src')) el.setAttribute('src',src); el.removeAttribute('data-src'); } } io.unobserve(el); } });
+        },{rootMargin:'300px 0px'});
+        document.querySelectorAll('img.lazy, video.lazy, iframe.lazy').forEach(function(el){ io.observe(el); });
+      } else { document.querySelectorAll('[data-src]').forEach(function(el){ const src = el.getAttribute('data-src'); if(src){ el.setAttribute('src',src); el.removeAttribute('data-src'); } }); }
+    }
+    document.addEventListener('DOMContentLoaded', lazyLoader);
+    document.addEventListener('click', function(e){ if(e.target && e.target.closest && e.target.closest('.read-more')) setTimeout(lazyLoader,50); }, true);
+  })();</script>
+</body>
+</html>
